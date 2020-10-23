@@ -1,5 +1,5 @@
 Plecs {
-  Name          "Intro_Plecs_2"
+  Name          "Exercicio2_2"
   Version       "4.3"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -46,7 +46,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [484, 96; 1305, 749]
+    Location      [484, 89; 1305, 742]
     ZoomFactor    1
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -60,7 +60,7 @@ Plecs {
       Flipped       on
       Parameter {
         Variable      "V"
-        Value         "120*sqrt(2)"
+        Value         "230*sqrt(2)"
         Show          on
       }
       Parameter {
@@ -102,12 +102,12 @@ Plecs {
       Type          Resistor
       Name          "R1"
       Show          on
-      Position      [640, 170]
+      Position      [640, 200]
       Direction     up
       Flipped       off
       Parameter {
         Variable      "R"
-        Value         "300"
+        Value         "2"
         Show          on
       }
     }
@@ -143,25 +143,25 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [760, 155]
+      Position      [625, 325]
       Direction     up
       Flipped       off
-      Location      [304, 203; 1282, 725]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAABefwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAK9AA"
-"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAXkAAABmAP///wAAAAMAAAPSAAAAcvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA9IAAABQAP///wAAAxoAAAF5AAAA"
+      Location      [219, 71; 1197, 747]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAB7PwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAK9AA"
+"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAewAAABmAP///wAAAAMAAAPSAAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA9IAAABQAP///wAAAxoAAAHsAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAIADQAMABtAHMAAAAAAAAAAD+keuFHrhR7AAAAAwB/+"
 "AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAAAf/gAAAAAAAB/+AAAAAAAAAAAAAAAAAAAAA"
 "AAAAAAAAAAAA=="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
-"QAAAGQAAAAIAAAAZAAAAAcAAABkAAAABgAAAGQAAAAFAAAAZAAAAAQAAABkAAAAAwAAAGQAAAACAA"
-"AAZAAAAAEAAABkAAADwQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAABWAAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
+"wAAAGQAAAAEAAAAZAAAAAUAAABkAAAAAgAAAGQAAAADAAAAZAAAAAEAAABkAAAACAAAAGQAAAAJAA"
+"AAZAAAAAYAAABkAAAD0gAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAABWAAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"ANrAAAAAQAAAAAAAAPoAAAAACc="
+"AN8AAAAAQAAAAAAAAPoAAAAACc="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "=="
@@ -301,7 +301,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [700, 120]
+      Position      [565, 290]
       Direction     right
       Flipped       off
       Parameter {
@@ -319,7 +319,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [700, 145]
+      Position      [565, 315]
       Direction     right
       Flipped       off
       Parameter {
@@ -337,7 +337,7 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [700, 170]
+      Position      [565, 340]
       Direction     right
       Flipped       off
       Parameter {
@@ -812,7 +812,7 @@ Plecs {
     }
     Component {
       Type          Display
-      Name          "Display"
+      Name          "Power Factor"
       Show          on
       Position      [465, 300]
       Direction     up
@@ -867,6 +867,19 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc"
+      Show          on
+      Position      [640, 145]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "50"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "R1"
@@ -888,14 +901,6 @@ Plecs {
         DstComponent  "Vm2"
         DstTerminal   2
       }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Am1"
-      SrcTerminal   2
-      Points        [640, 95]
-      DstComponent  "R1"
-      DstTerminal   1
     }
     Connection {
       Type          Wire
@@ -929,7 +934,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
-      Points        [720, 170; 720, 165]
+      Points        [585, 340; 585, 335]
       DstComponent  "Scope"
       DstTerminal   3
     }
@@ -937,7 +942,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
-      Points        [720, 145; 720, 155]
+      Points        [585, 315; 585, 325]
       DstComponent  "Scope"
       DstTerminal   2
     }
@@ -945,7 +950,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From"
       SrcTerminal   1
-      Points        [725, 120; 725, 145]
+      Points        [590, 290; 590, 315]
       DstComponent  "Scope"
       DstTerminal   1
     }
@@ -975,7 +980,7 @@ Plecs {
       Type          Signal
       SrcComponent  "PF"
       SrcTerminal   3
-      DstComponent  "Display"
+      DstComponent  "Power Factor"
       DstTerminal   1
     }
     Connection {
@@ -994,6 +999,21 @@ Plecs {
       DstComponent  "PF"
       DstTerminal   1
     }
+    Connection {
+      Type          Wire
+      SrcComponent  "Am1"
+      SrcTerminal   2
+      Points        [640, 95]
+      DstComponent  "V_dc"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc"
+      SrcTerminal   2
+      DstComponent  "R1"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "W5/qnXO0zUfslq6A96B3AqgtCSigXqzIWms1ygN8nrU="
+DemoSignature "C9ixmBdBXoV4DQVFRcBIW3LDqey66InmT/r/Agjk9vM="

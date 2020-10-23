@@ -1,5 +1,5 @@
 Plecs {
-  Name          "Intro_Plecs_2"
+  Name          "Exercicio1_2"
   Version       "4.3"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -46,7 +46,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [484, 96; 1305, 749]
+    Location      [484, 89; 1305, 742]
     ZoomFactor    1
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -60,7 +60,7 @@ Plecs {
       Flipped       on
       Parameter {
         Variable      "V"
-        Value         "120*sqrt(2)"
+        Value         "230*sqrt(2)"
         Show          on
       }
       Parameter {
@@ -102,12 +102,12 @@ Plecs {
       Type          Resistor
       Name          "R1"
       Show          on
-      Position      [640, 170]
+      Position      [640, 200]
       Direction     up
       Flipped       off
       Parameter {
         Variable      "R"
-        Value         "300"
+        Value         "8"
         Show          on
       }
     }
@@ -812,7 +812,7 @@ Plecs {
     }
     Component {
       Type          Display
-      Name          "Display"
+      Name          "Power Factor"
       Show          on
       Position      [465, 300]
       Direction     up
@@ -867,6 +867,24 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Inductor
+      Name          "L1"
+      Show          on
+      Position      [640, 145]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         "0.031831"
+        Show          on
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "R1"
@@ -888,14 +906,6 @@ Plecs {
         DstComponent  "Vm2"
         DstTerminal   2
       }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Am1"
-      SrcTerminal   2
-      Points        [640, 95]
-      DstComponent  "R1"
-      DstTerminal   1
     }
     Connection {
       Type          Wire
@@ -975,7 +985,7 @@ Plecs {
       Type          Signal
       SrcComponent  "PF"
       SrcTerminal   3
-      DstComponent  "Display"
+      DstComponent  "Power Factor"
       DstTerminal   1
     }
     Connection {
@@ -994,6 +1004,21 @@ Plecs {
       DstComponent  "PF"
       DstTerminal   1
     }
+    Connection {
+      Type          Wire
+      SrcComponent  "Am1"
+      SrcTerminal   2
+      Points        [640, 95]
+      DstComponent  "L1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L1"
+      SrcTerminal   1
+      DstComponent  "R1"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "W5/qnXO0zUfslq6A96B3AqgtCSigXqzIWms1ygN8nrU="
+DemoSignature "2YExhsNicIf72qV/eVO7dI75AWnwikFuJPbSIULAXUY="
