@@ -1,0 +1,484 @@
+\documentclass[titlepage, a4paper, 11pt, reqno, openany]{report}
+%
+%\begin{comment}
+%a4paper leqno reqno letterpaper  a5paper b5paper executivepaper legalpaper draft amsart
+%\end{comment}
+%ladscape twocolumn oneside twoside
+%titlepage openany
+%article report book slides proc minimal amsart sample
+%
+\input{./input/PREAMBLE}
+%
+\begin{document}
+\include{./include/Capa}%titlepage
+%
+\tableofcontents
+%
+\appendix
+%
+\pagestyle{plain}%plain headings empty
+%
+%few lessons \newline \newpage only in text.
+%\pagestyle{headings} %estilo de numeração
+%{\tiny text}{\scriptsize text}{\footnotesize text}{\small text}{\normalize text}{\large text}{\Large text}{\huge text}{Huge text}{\it text}{\bf text}{\tt text}\underline{text}
+%\newline \newpage \linebreak \\[distance]
+%\. \, \; quad qquad hspace{xx cm} vspace{xx cm}
+%{\color{cor}text}
+%\footcite{•}\twocolumn\onecolumn
+% $ formula $ $$ formula $$ \nonumber \\
+%\frac{•}{•} \dfrac{•}{•} \sqrt[•]{•} \binom{}{}
+%\mathbb{NZqRC} \mathcal{texto} \mathfrak{texto}
+%\vert \Vert \leq \geq \neq \to \lim
+%displaystyle \int \sum \prod \cup \cap
+%\longleftarrow \overline{•} \langle
+%\hline \caption \label \centering \ref{Capa}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Problema 1 - A 1}\label{parte1}
+%
+\section{An\'{a}lise circuito \index{circuito} $LC$, $D-LC$ e $RLC$ em $C.C$.}
+%
+An\'{a}lise de transit\'{o}rios \index{transit\'{o}rios} num circuito \index{circuito} $RLC$ s\'{e}rie, alimentado por uma fonte \index{fonte} $DC$.\par
+%
+Considere o circuito \index{circuito}:\par
+%
+\begin{minipage}{0.95\linewidth}
+\centering
+\makebox[0.9\linewidth]{
+\includegraphics[scale=0.8]%width height angle scale
+{./image/Screenshot11.png}
+}
+\captionof{figure}{Circuito LC C.C}
+\label{figura 1}
+\end{minipage}\par
+%
+\begin{enumerate}
+%1
+\item
+O interruptor \index{interruptor} \'{e} fechado em $t=0s$ e nesse instante $V_c=0$ (condensador \index{condensador} descarregado).\par
+%
+\begin{enumerate}
+%1a
+\item
+Com os pontos \index{pontos} $A$ e $B$ em curto-circuito \index{curto-circuito}. Deduze \index{Deduze} as formas \index{formas} de onda \index{onda} da corrente \index{corrente} $i(t)$; da tens\~{a}o \index{tens\~{a}o} no condensador \index{condensador} $V_c(t)$; da tens\~{a}o \index{tens\~{a}o} na bobine \index{bobine} $V_L(t)$. Representando \index{Representando} as formas \index{formas} de onda \index{onda} obtidas \index{obtidas};\par
+%
+Fonte \index{Fonte} de alimenta\c{c}\~ao \index{alimenta\c{c}\~ao}\par
+\begin{equation}
+V_{DC}(t)=100\times u(t)
+\end{equation}\par
+%
+Condi\c{c}\~{o}es \index{Condi\c{c}\~{o}es} iniciais \index{iniciais}\par
+\[ V_c(0^-)=0 \]\par
+Equa\c{c}\~{a}o \index{Equa\c{c}\~{a}o} do circuito \index{circuito}\par
+%
+\begin{equation}
+\boxed{
+V_{DC}(t)=\frac{Q_c(t)}{C}+L \cdot \frac{d i(t)}{dt}\ \ ;\ t>0^-}
+\end{equation}\par
+%
+\begin{flalign}
+Q_c(t)=&\int^ti(t) \quad dt &\\ =&Q_c(0^-)+\int_{0^-}^ti(t) \quad dt \nonumber &\\
+V_{DC}(t)=&\frac{1}{C}\times\left[Q_c(0^-)+\int_{0^-}^t i(t) \quad dt\right]+L\times\frac{di(t)}{dt} &\\
+=&\frac{Q_c(0^-)}{C}+\frac{\int_{0^-}^t i(t) \quad dt}{C}+L\times\frac{di(t)}{dt} \nonumber &\\
+=&V_c(0^-)+\frac{\int_{0^-}^t i(t) \quad dt}{C}+L\times\frac{di(t)}{dt} \nonumber &
+\end{flalign}\par
+%
+Aplicando agora a transformada \index{transformada} ($\mathcal{L}$) de Laplace \index{Laplace} a equa\c{c}\~{a}o \index{equa\c{c}\~{a}o} com $V_c(0^-)=0$ e $i_L(0^-)=0$\par
+%
+\begin{flalign}
+V_{DC}(s)=&\frac{I(s)}{sC}+L\times\left[sI(s)-i_L(0^-) \right] & \\
+=&\frac{I(s)}{sC}+LsI(s) \nonumber & \\
+\frac{100}{s}=&\left[ \frac{1}{sC}+Ls \right]\times I(s) & \\
+=&\left[ \frac{LCs^2+1}{sC} \right]\times I(s) \nonumber & \\
+=&\left[ \frac{s^2+\frac{1}{LC}}{\frac{s}{L}} \right]\times I(s) \nonumber & \\
+=&\left[ \frac{L(s^2+\frac{1}{LC})}{s} \right]\times I(s) \nonumber & \\
+100=&\left[ L(s^2+\frac{1}{LC}) \right]\times I(s) & \\
+I(s)=&\frac{\frac{100}{L}}{s^2+\frac{1}{LC}} & \\
+=&\left.K_1\times\frac{\frac{1}{\sqrt{LC}}}{s^2+\left( \frac{1}{\sqrt{LC}} \right)^2}\right|_{K_1=\frac{100\sqrt{LC}}{L}} \ \ \ Roc>0 \nonumber &
+\end{flalign}\par
+%
+Da como resultado \index{resultado} sua corrente \index{corrente},\par
+%
+\begin{equation}
+i(t)=10\sin{\frac{t}{\sqrt{LC}}}\ u(t)
+\end{equation}\par
+%
+A tens\~{a}o \index{tens\~{a}o} na bobine \index{bobine} $V_L(t)=L\frac{d i(t)}{dt}$, isto \'{e},\par
+%
+\begin{equation}
+V_L(t)=100\cos{\frac{t}{\sqrt{LC}}}\ u(t)
+\end{equation}\par
+%
+A tens\~{a}o \index{tens\~{a}o} no condensador \index{condensador} $V_c(t)=\frac{1}{C}\int_{0^-}^ti(t)$, isto \'{e},\par
+%
+\begin{equation}
+V_c(t)=100 \left(1-\cos{\frac{t}{\sqrt{LC}}}\right)\ u(t)
+\end{equation}\par
+%
+Representa\c{c}\~{a}o \index{Representa\c{c}\~{a}o} gr\'{a}fica \index{gr\'{a}fica}:\par
+%
+\begin{figure}[H]
+%h t b H !h
+\centering
+\includegraphics[scale=0.80]{./image/electpt2.png}
+\caption{{\color{red}$V_c(t)$}\quad e \quad {\color{green}$V_L(t)$} \quad e \quad{\color{blue}$i(t)$}}
+\label{figura 2}
+\end{figure}
+%1b
+\item
+Supondo \index{Supondo} agora que entre $A$ e $B$ \'{e} colocado \index{colocado} um d\'{i}odo \index{d\'{i}odo} com o C\'{a}todo \index{C\'{a}todo} ligado \index{ligado} a $A$.\par
+%
+Como o d\'{i}odo \index{d\'{i}odo} s\'{o} conduz \index{conduz} numa direc\c{c}\~{a}o \index{direc\c{c}\~{a}o}, n\~{a}o existe for\c{c}a \index{for\c{c}a} contra eletromotriz \index{eletromotriz} da bobine \index{bobine}, ou seja, a corrente \index{corrente} s\'{o} flui numa direc\c{c}\~{a}o \index{direc\c{c}\~{a}o}, isto \'{e}, s\'{o} existe meio ciclo \index{ciclo} da onda \index{onda} sinusoidal \index{sinusoidal} j\'{a} obtida no exerc\'{i}cio anterior.\par
+%
+\[
+i(t)=
+\begin{cases}
+10\sin{\frac{1}{\sqrt{LC}}t},
+&\text{if \quad $0 \leq t < \frac{T_0}{2}$;}\\
+0,
+&\text{if \quad $t \geq \frac{T_0}{2}$;}\\
+\end{cases}
+\]\par
+%
+A partir de \quad $t \geq \frac{T_0}{2}$ \quad condi\c{c}\~{o}es inicias \quad $V_c(\frac{T_0}{2}^-)=200$ \quad e \quad $V_L(\frac{T_0}{2}^-)=-100$\par
+%condensador
+\begin{flalign}
+V_c(t) =& V_c(\frac{T_0}{2}^-)+\frac{\int_{\frac{T_0}{2}^-}^t i(t)}{C} & \\
+=& V_c(\frac{T_0}{2}^-)+0 \nonumber & \\
+=& 200 \times u \left(t-\frac{T_0}{2} \right) \nonumber & \\
+%bobine
+V_L(t) =& L \dfrac{d i(t)}{dt} & \\
+=& 0 \times u \left(t-\frac{T_0}{2} \right) \nonumber &
+\end{flalign}\par
+%graphico
+Representa\c{c}\~{a}o gr\'{a}fica:\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.95]{./image/electpt5.png}
+\caption{Circuito LC com d\'{i}odo em C.C}
+\label{figura 3}
+\end{figure}
+%
+Na qual ao chegar e ap\'{o}s a $t=\frac{\pi}{10000}$ a tens\~{a}o \index{tens\~{a}o} do \textcolor{red}{condensador} \index{condensador} continua \index{continua} nos $200V$ e a tens\~{a}o \index{tens\~{a}o} na \textcolor{green}{bobine} \index{bobine} e a \textcolor{blue}{corrente} \index{corrente} s\~{a}o nulos \index{nulos}.\par
+%1c
+\item
+Supondo \index{Supondo} que o d\'{i}odo \index{d\'{i}odo} \'{e} substitu\'{i}do por uma resist\^{e}ncia \index{resist\^{e}ncia} $R$, determine o valor da resist\^{e}ncia \index{resist\^{e}ncia} de modo a que o circuito \index{circuito} tenha um comportamento \index{comportamento} n\~{a}o oscilat\'{o}rio \index{oscilat\'{o}rio}.\par
+%
+Equa\c{c}\~{a}o \index{Equa\c{c}\~{a}o} do circuito \index{circuito}\par
+%
+\begin{equation}
+\boxed{
+V_{DC}(t)=\frac{Q_c(t)}{C}+L\frac{d i(t)}{dt}+R\ i(t)\ \ ;\ t>0^-}
+\end{equation}\par
+%\fbox{text}
+%
+Aplicando \index{Aplicando} a Transformada \index{Transformada} de Laplace \index{Laplace}, supondo que as condi\c{c}\~{o}es iniciais \index{iniciais} s\~{a}o nulas \index{nulas}\par
+%
+\begin{flalign}
+\frac{V_{DC}(s)}{I(s)}=&Ls+\frac{1}{sC}+R\ \ ;\ Roc>0^- & \\
+\frac{V_{DC}(s)Cs}{I(s)}=&LCs^2+RCs+1 & \\
+\frac{V_{DC}(s)s}{I(s)L}=&s^2+\frac{R}{L}s+\frac{1}{LC} & \\
+I(s)=&\frac{100/L}{s^2+\frac{R}{L}s+\frac{1}{LC}} &
+\end{flalign}\par
+%
+Desta Equa\c{c}\~{a}o \index{Equa\c{c}\~{a}o} sabemos que:\par
+%
+$2 \xi \omega_n = \frac{R}{L}$\; ; \qquad
+$\omega_n^2=\frac{1}{LC}$\; ; \qquad
+$\omega_d=w_n\sqrt{1-\xi^2}$\par
+e que:\par
+%
+$Subamortecido\implies 0\leq \xi <1$\par
+$Amortecido\ critico\implies \xi =1$\par
+$Sobreamortecido\implies \xi >1$\par
+$$\therefore$$
+$$para\  \xi = 1$$
+%
+\begin{equation}
+2\omega_n=\frac{R}{L}\ \ ou\ \ \left(\frac{R}{L}\right)^ 2-4\times \frac{1}{LC}=0\\
+\end{equation}\par
+%
+logo o valor resistivo \index{resistivo} \'{e} 20 $\Omega$ (ohm)\par
+%
+\begin{flalign}
+I(s)=&\frac{\frac{100}{L}}{(s+\frac{R}{2L})^2}\quad, Roc>\frac{-R}{2L} & \\
+i(t)=&\frac{100}{L}\quad e^{-\frac{R}{2L}t}\ t\times u(t) &\\
+=&100000\,\,t\quad e^{-10000 t}\times u(t) \nonumber &
+\end{flalign}\par
+%
+Representa\c{c}\~{a}o \index{Representa\c{c}\~{a}o} gr\'{a}fica \index{gr\'{a}fica}:\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{./image/electpt4.png}\\
+\caption{Circuito RLC Amortecido cr\'{i}tico C.C}
+\label{figura 4}
+\end{figure}
+%
+\end{enumerate}
+\end{enumerate}
+%
+\begin{abstract}
+Foram Efetuado \index{Efetuado} todas as dedu\c{c}\~{o}es \index{dedu\c{c}\~{o}es} matem\'{a}ticas \index{matem\'{a}ticas} necess\'{a}rias de modo a explicar \index{explicar} convenientemente a evolu\c{c}\~{a}o \index{evolu\c{c}\~{a}o} da corrente \index{corrente} $i(t)$ e tens\~{o}es \index{tens\~{o}es} $V_c(t)$ e $V_L(t)$, e obtido as formas \index{formas} de onda \index{onda} com base nas express\~{o}es \index{express\~{o}es} matem\'{a}ticas \index{matem\'{a}ticas}, como demonstrado \index{demonstrado} na Parte \, \index{Parte} \ref{eq}.
+\end{abstract}
+%
+\appendix
+\part{Problema 1 - A 2}
+\section{Simula\c{c}\~{a}o \index{Simula\c{c}\~{a}o} no {\bf PSIM}.}
+\begin{enumerate}
+%1
+\item
+Simula\c{c}\~{a}o \index{Simula\c{c}\~{a}o} no {\bf PSIM} os circuitos/problema \index{circuitos} apresentado \index{apresentado} na Parte \ref{parte1}. Registando \index{Registando} a formas \index{formas} de onda \index{onda} e comparando \index{comparando} os resultados \index{resultados}.\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.3]{./image/PSIM_0.png}
+\caption{Programa $PSIM$}
+\label{figura 5}
+\end{figure}\par
+%
+\begin{enumerate}
+%1a
+\item
+Ensaio \index{Ensaio} com curto-circuito \index{curto-circuito} entre $A$ e $B$\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_1.png}
+\caption{$V_c(t)$}
+\label{figura 6}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_2.png}
+\caption{$V_L(t)$}
+\label{figura 7}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_3.png}
+\caption{$i(t)$}
+\label{figura 8}
+\end{figure}\par
+%1b
+\item
+Ensaio \index{Ensaio} com d\'{i}odo \index{d\'{i}odo} entre $A$ e $B$\\
+Aqui existe uma differen\c{c}a \index{differen\c{c}a} com o modelo \index{modelo} matem\'{a}tico \index{matem\'{a}tico}, pois $V_L(t)$ tem um declive \index{declive} para {\color{blue} zero} depois de $t\geq\frac{T_0}{2}$.\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_4.png}
+\caption{$V_c(t)$}
+\label{figura 9}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_5.png}
+\caption{$V_L(t)$}
+\label{figura 10}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_6.png}
+\caption{$V_D(t)$}
+\label{figura 11}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_7.png}
+\caption{$i(t)$}
+\label{figura 12}
+\end{figure}\par
+%1c
+\item
+Ensaio \index{Ensaio} com Resist\^{e}ncia \index{Resist\^{e}ncia} de 20 $\Omega$ (ohm) entre $A$ e $B$\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_8.png}
+\caption{$V_c(t)$}
+\label{figura 13}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_9.png}
+\caption{$V_L(t)$}
+\label{figura 14}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_10.png}
+\caption{$V_R(t)$}
+\label{figura 15}
+\end{figure}\par
+%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_11.png}
+\caption{$i(t)$}
+\label{figura 16}
+\end{figure}\par
+%
+\end{enumerate}
+%2
+\item
+Considerado \index{Considerado} o circuito \index{circuito}. O interruptor \index{interruptor} \'{e} fechado \index{fechado} em $t=0 s$.\par
+%
+\begin{minipage}{0.95\linewidth}
+%\centering
+\makebox[0.9\linewidth]{
+\includegraphics[scale=0.8]{./image/Screenshot12.png}
+}
+\captionof{figure}{Circuito RLC em C.C}
+\label{figura 17}
+\end{minipage}\par
+%
+Socorrendo \index{Socorrendo} ao Excel (ou equivalente OpenOffice), s\~{a}o representadas \index{representadas} as formas \index{formas} de onda \index{onda} da corrente \index{corrente} i(t) para os seguintes valores \index{valores} de R, L e C:\par
+%
+\begin{enumerate}
+%2a
+\item
+R=2$\Omega$\ \  L=1H\ \  C=0,01F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{./image/image_a.png}
+\caption{$\xi=0.1$}
+\label{figura 18}
+\end{figure}\par
+%2b
+\item
+R=2$\Omega$\ \  L=1H\ \  C=0,1F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{./image/image_b.png}
+\caption{$\xi=0.31622776601684$}
+\label{figura 19}
+\end{figure}\par
+%2c
+\item
+R=2$\Omega$\ \  L=1H\ \  C=0,5F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{./image/image_c.png}
+\caption{$\xi=0.707106781188655$}
+\label{figura 20}
+\end{figure}\par
+%2d
+\item
+R=2$\Omega$\ \  L=1H\ \  C=1F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{./image/image_d.png}
+\caption{$\xi=1$}
+\label{figura 21}
+\end{figure}\par
+%2e
+\item
+R=2$\Omega$\ \  L=1H\ \  C=3F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{./image/image_e.png}
+\caption{$\xi=\sqrt{3}$}
+\label{figura 22}
+\end{figure}\par
+%2f
+\item
+R=0$\Omega$\ \  L=1H\ \  C=0,5F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{./image/image_f.png}
+\caption{$\xi=0$}
+\label{figura 23}
+\end{figure}\par
+%
+{Formas \index{Formas} de onda \index{onda} obtidas classificadas \index{classificadas} no que diz respeito \index{respeito} ao seu amortecimento \index{amortecimento}}\par
+%
+\begin{equation}
+\xi=\frac{R\sqrt{LC}}{2L}
+\end{equation}
+%
+\end{enumerate}
+%3
+\item
+Simula\c{c}\~{a}o \index{Simula\c{c}\~{a}o} no {\bf PSIM} o problema \index{problema} apresentado \index{apresentado} no ponto anterior. Registando \index{Registando} a formas \index{formas} de onda \index{onda} e comparando \index{comparando} os resultados \index{resultados}.\par
+%
+\begin{enumerate}
+%3a
+\item
+R=2$\Omega$\ \  L=1H\ \  C=0,01F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_12.png}
+\caption{$\xi=0.1$}
+\label{figura 24}
+\end{figure}\par
+%3b
+\item
+R=2$\Omega$\ \  L=1H\ \  C=0,1F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_13.png}
+\caption{$\xi=0.31622776601684$}
+\label{figura 25}
+\end{figure}\par
+%3c
+\item
+R=2$\Omega$\ \  L=1H\ \  C=0,5F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_14.png}
+\caption{$\xi=0.707106781188655$}
+\label{figura 26}
+\end{figure}\par
+%3d
+\item
+R=2$\Omega$\ \  L=1H\ \  C=1F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_15.png}
+\caption{$\xi=1$}
+\label{figura 27}
+\end{figure}\par
+%3e
+\item
+R=2$\Omega$\ \  L=1H\ \  C=3F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_16.png}
+\caption{$\xi=\sqrt{3}$}
+\label{figura 28}
+\end{figure}\par
+%3f
+\item
+R=0$\Omega$\ \  L=1H\ \  C=0,5F\par
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{./image/PSIM_17.png}
+\caption{$\xi=0$}
+\label{figura 29}
+\end{figure}\par
+%
+\end{enumerate}
+\end{enumerate}
+%
+\begin{abstract}
+Foi apresentado \index{apresentado} os c\'{a}lculos \index{c\'{a}lculos}  \index{matem\'{a}ticos}, formas de onda \index{onda} pelo modelo \index{modelo} matem\'{a}tico \index{matem\'{a}tico} e pelo simulador \index{simulador} {\bf PSIM}, na situa\c{c}\~{a}o \index{situa\c{c}\~{a}o} da Figura \ref{figura 1} em curto-circuito \index{curto-circuito}, com resist\^{e}ncia \index{resist\^{e}ncia} em amortecimento \index{amortecimento} cr\'{i}tico \index{cr\'{i}tico} e com d\'{i}odo \index{d\'{i}odo}, mostrando os comportamentos \index{comportamentos} das vari\'{a}veis \index{vari\'{a}veis} Tens\~{a}o \index{Tens\~{a}o} e Corrente \index{Corrente}, depois foi feito o estudo da Figura \ref{figura 17} circuito \index{circuito} $RLC$ nos seus estados \index{estados} de amortecimento \index{amortecimento} ($\xi$) e respetivo comportamento \index{comportamento} das suas vari\'{a}veis \index{vari\'{a}veis}, os valores \index{valores} obtidos sendo iguais \index{iguais} pela representa\c{c}\~{a}o \index{representa\c{c}\~{a}o} matem\'{a}tica \index{matem\'{a}tica} e simulador \index{simulador} {\bf PSIM}.
+\end{abstract}
+\newpage
+\input{./input/equacao}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoffigures
+\cite{*}
+\bibliography{./bibliography/Bibliography}
+%\printindex
+\newpage
+\footnote{Apontamentos Electr\'{o}nica de Pot\^{e}ncia}
+\end{document}

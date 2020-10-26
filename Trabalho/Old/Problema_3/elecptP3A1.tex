@@ -1,0 +1,123 @@
+\documentclass[titlepage, a4paper, 11pt, reqno, openany]{article}%report
+\input{./input/PREAMBLE}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\include{./include/Capa}%titlepage
+\pagestyle{plain}%plain headings empty
+\tableofcontents
+\newpage
+%%%%%%%%%%INICIO%%%%%%%%%%%%%%%%%%%%
+{\huge Montagens $P2$ e $PD2$.}\par
+%
+\begin{flushleft}
+Considere a seguinte montagem $P2$ da Figura \ref{grafico 1} Suponha $V_s$ = tens\~{a}o da rede el\'{e}ctrica nacional ($230V\,\, 50Hz$).\par
+\end{flushleft}
+%
+%{\Huge $\phi_n \approx$}\\
+
+%{\Huge $\alpha =$}
+%
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{./image/P3A1.png}\\
+\caption{Montagem paralela dupla controlada}
+\label{grafico 1}
+\end{figure}\par
+%seccao 1
+\section{\textnormal{Suponha o transformador ideal, com a rela\c{c}\~{a}o de transforma\c{c}\~{a}o entre enrolamentos de $1:1$ e 
+que o \^{a}ngulo de disparo dos tir\'{i}stores \'{e} aos $100^{\circ}$ graus.}}\par
+%
+$R=12\Omega; \qquad L=30\times 10^{-3}\mathbb{H}$\par
+Dados passivos do circuito, como constitui de os elementos $RL$ em serie, podemos adquirir a constante de tempo $\tau=\frac{L}{R}$ a sua imped\^{a}ncia $\overrightarrow{Z}=R + j \omega L$ e o desfazamento de regime permanente $\phi_p=\arctan(\frac{\omega L}{R})$.\par
+%
+Nos \'{e} dado o \^{a}ngulo de disparo de $\alpha=100^{\circ}$ graus e que o circuito tem alimenta\c{c}\~{a}o da rede el\'{e}trica, daqui sabemos que a frequ\^{e}ncia \'{e} de $50 Hz$ e $V_{m\acute{a}x}=230$ da sinusoide. Respetivamente adquirimos a velocidade \^{a}ngular $\omega=2\pi50$ rad/sec.\par
+%
+Com o \^{a}ngulo de disparo podemos calcular o avan\c{c}o da corrente em regime transit\'{o}rio para isso $\omega t$ \'{e} calculado para $C_T \; e^{\frac{R}{\omega L}*\omega t} = - \frac{V_{m\acute{a}x}}{\overline{Z}}\sin(\omega t + \alpha - \phi)$ 
+ no intervalo $[0 \; , \; 2\pi]$ como demonstra na sec\c{c}\~{a}o \ref{eq}. 
+$\omega t=1,99219957 \approx 1,990$ radianos, e a corrente \'{e} positiva no intervalo respetivo $0^{\circ} \leq \omega t \leq 114,019^{\circ}$ em refer\^{e}ncia ao disparo.\par
+$\phi_n \approx 0,596$ radianos de avan\c{c}o no regime transit\'{o}rio. E $\phi_p \approx 0,666$ radianos no regime permanente mas neste caso s\'{o} nos interessa o transit\'{o}rio.\par
+Mais coisas a considerar \'{e} que os tir\'{i}stores s\~{a}o alimentados por fontes em opposi\c{c}\~{a}o de fase, isto quer dizer que os disparos devem estar desfazados de $\pi$ radianos e ter disparo com \^{a}ngulo superior a $\phi_n$.
+O sincronismo dos disparos \'{e} crucial para um bom controlo, pois se o segundo tir\'{i}stor disparar enquanto o primeiro esta em condu\c{c}\~{a}o dentro do intervalo $[0 \; , \; \pi]$ o segundo tir\'{i}stor n\~{a}o entra em condu\c{c}\~{a}o, mas se o disparo \'{e} efetuado no intervalo de $[\pi \; , \; \pi+\phi_n]$ este entrara em sobrecarga, pois as condi\c{c}\~{o}es iniciais n\~{a}o ser\~{a}o nulas.\par
+%1.1
+\subsection{\textnormal{Determine o \^{a}ngulo e o tempo de condu\c{c}\~{a}o $\gamma$ de cada tir\'{i}stor (especifique a express\~{a}o da corrente e determine o tempo de condu\c{c}\~{a}o com a ajuda do {\bf Excel1});}}
+%
+Representa\c{c}\~{a}o gr\'{a}fica do primeiro disparo, o segundo disparo sera exatamente igual, em que a onda sinusoidal em vez de come\c{c}ar nos $0$ radianos ira come\c{c}ar nos $\pi$ radianos.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\linewidth]{./image/P3A1_1_3.png}\\
+\caption{Representa\c{c}\~{a}o das tens\~{o}es}
+\label{grafico 1}
+\end{figure}\par
+%
+O primeiro tir\'{i}stor ira conduzir de $\alpha \approx 1,745$ rad at\'{e} $\pi + \phi_n  \approx 3,738$ rad, e o segundo tir\'{i}stor ira conduzir de $\approx 4,887$ rad at\'{e} $2\pi + \phi_n \approx 6,879$ rad.\par
+Cada tir\'{i}store conduz $\gamma \approx 1,993$ rad, que em segundos ser\'{a} $t_c \approx 6,34$ ms num ciclo.
+A expressao da corrente \'e como demostrado na se\c{c}\~{a}o \ref{eq}, com $E=0$, isto \'{e},
+\begin{equation}
+I(\omega t) = \frac{V_{m\acute{a}x}}{\overline{Z}} \sin(\omega t + \alpha - \phi_p) - \frac{V_{m\acute{a}x}}{\overline{Z}} \sin(\alpha - \phi_p) \; e^{-\frac{R}{L \omega}\omega t}
+\end{equation}
+%1.2
+\subsection{\textnormal{Identifique e determine a constante de tempo do circuito.}}
+\begin{equation}
+\tau = \frac{L}{R} = 2,5 ms 
+\end{equation}
+%1.3
+\subsection{\textnormal{Desenhe numa folha anexa a forma de onda da tens\~{a}o na carga ($V_L$) e uma poss\'{i}vel forma de onda para a corrente ($I_L$) com os respetivos regimes transit\'{o}rio e permanente.}}
+%1.4
+\subsection{\textnormal{Determine o valor m\'{e}dio da tens\~{a}o $V_{Lo}$, na carga;}}
+%
+A m\'{e}dia \'{e} sempre calculada para um ciclo, onde o integral de zero \'{e} zero,
+%
+\begin{flalign}
+V_{Loav} =& \frac{1}{T} \; \int_0^T V_L(t) dt &\\
+V_L(t) =& L \quad \dfrac{d i_L(t)}{dt} &\\
+=& L \quad \left( \frac{R \; V_{m\acute{a}x}}{\overline{Z} L} \; \sin(\alpha - \phi_p) \; e^{- \frac{R}{L}t} + \frac{\omega \; V_{m\acute{a}x}}{\overline{Z}} \; \cos(\omega t + \alpha - \phi_p) \right) & \nonumber \\
+=& \frac{R \; V_{m\acute{a}x}}{\overline{Z}} \; \sin(\alpha - \phi_p) \; e^{- \frac{R}{L}t} + \frac{\omega \; L \; V_{m\acute{a}x}}{\overline{Z}} \; \cos(\omega t + \alpha - \phi_p) & \nonumber \\
+V_L(\omega t) =& \frac{R \; V_{m\acute{a}x}}{\overline{Z}} \; \sin(\alpha - \phi_p) \; e^{- \frac{R}{\omega L}\omega t} + \frac{\omega \; L \; V_{m\acute{a}x}}{\overline{Z}} \; \cos(\omega t + \alpha - \phi_p) & \\
+V_{Loav} =& \frac{1}{\pi+\phi_n - \alpha} \; \left. \int_0^{\pi+\phi_n - \alpha} V_L(wt) dt \right|_{\alpha \approx 1,745}&
+\end{flalign}
+
+
+
+%1.5
+\subsection{\textnormal{Especifique o integral que lhe permite determinar o valor eficaz da corrente $I_{Lrms}$  na carga (n\~{a}o necessita calcular o integral, na aula mas fa\c{c}a-o em casa);}}
+%1.6
+\subsection{\textnormal{Considerando $I_{Lrms}=6$ A, determine a pot\^{e}ncia dissipada na carga;}}
+%1.7
+\subsection{\textnormal{Utilizando o {\bf Excel} represente a pot\^{e}ncia atribu\'{i}da \`{a} carga $p(t)$ e determine o factor de pot\^{e}ncia $FP$. Nota: $p(t)=v(t).i(t)$ e $P=V.I.\cos \phi$.}}
+%1.8
+\subsection{\textnormal{Supondo que existe uma f.c.e.m ($E=100v$) represente as formas de onda da corrente ($I_L$) e tens\~{a}o ($V_L$) na carga.}}
+%1.9
+\subsection{\textnormal{Suponha que substitui os tir\'{i}stores por d\'{i}odos (montagem PD2) e que a montagem apresenta uma $fcem$ ($E=100v$). Desenhe numa folha anexa a forma de onda da tens\~{a}o na carga ($V_L$) e 
+uma poss\'{i}vel forma de onda para a corrente ($I_L$).}}
+
+
+
+
+
+%seccao 2
+\section{\textnormal{{\bf PSIM}}}\label{A2}
+%2.1
+\subsection{\textnormal{Simule os circuitos referidos da aula anterior ($P2$ e $PD2$) para confirmar todos resultados determinados (apresente todas as ondas incluindo os impulsos \'{a}s gates dos tir\'{i}stores).}}
+
+
+\begin{enumerate}
+\item usar a folha {\bf Excel} que obteve no Problema 3;\par 
+\item no relat\'{o}rio dever\'{a} justificar todas os c\'{a}lculos e ondas representadas.
+\end{enumerate}
+%Resumo
+\begin{abstract}
+%
+resumo
+%
+\end{abstract}
+%Seccao 3
+\input{./input/equacao}
+\newpage
+\listoffigures
+\newpage
+\cite{*}
+\bibliography{./bibliography/Bibliography}
+\newpage
+\footnote{Apontamentos Electr\'{o}nica de Pot\^{e}ncia}
+%
+\end{document}

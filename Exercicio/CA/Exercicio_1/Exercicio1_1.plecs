@@ -46,7 +46,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [623, 257; 1160, 523]
+    Location      [565, 80; 1325, 646]
     ZoomFactor    1
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -76,7 +76,7 @@ Plecs {
     }
     Component {
       Type          Voltmeter
-      Name          "Vm1"
+      Name          "Vi"
       Show          on
       Position      [150, 145]
       Direction     up
@@ -84,7 +84,7 @@ Plecs {
     }
     Component {
       Type          Voltmeter
-      Name          "Vm2"
+      Name          "Vo"
       Show          on
       Position      [230, 145]
       Direction     up
@@ -92,7 +92,7 @@ Plecs {
     }
     Component {
       Type          Ammeter
-      Name          "Am1"
+      Name          "Ir"
       Show          on
       Position      [290, 75]
       Direction     left
@@ -146,22 +146,21 @@ Plecs {
       Position      [475, 135]
       Direction     up
       Flipped       off
-      Location      [304, 203; 1282, 725]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAABUvwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [304, 162; 1282, 725]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAABe/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAK9AA"
-"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAVIAAABmAP///wAAAAMAAAPSAAAAmfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA9IAAABQAP///wAAAxoAAAFSAAAA"
+"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAXsAAABmAP///wAAAAMAAAPSAAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA9IAAABQAP///wAAAxoAAAF7AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAIADQAMABtAHMAAAAAAAAAAD+keuFHrhR7AAAAAwB/+"
 "AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAAAf/gAAAAAAAB/+AAAAAAAAAAAAAAAAAAAAA"
 "AAAAAAAAAAAA=="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
-"wAAAGQAAAAEAAAAZAAAAAUAAABkAAAAAgAAAGQAAAADAAAAZAAAAAEAAABkAAAACAAAAGQAAAAJAA"
-"AAZAAAAAYAAABkAAAD0gAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAABWAAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AN8AAAAAQAAAAAAAAPoAAAAACc="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDYAA"
+"AALAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAALAAAAVgAAAAEAAAAAAAAAZAAAAAEAAA"
+"AAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAE"
+"AAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAXAAAAAEAAAAAAAAD6AAA"
+"AAAn"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "=="
@@ -169,7 +168,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
@@ -382,12 +381,12 @@ Plecs {
           DstTerminal   2
         }
         Branch {
-          DstComponent  "Vm1"
+          DstComponent  "Vi"
           DstTerminal   2
         }
       }
       Branch {
-        DstComponent  "Vm2"
+        DstComponent  "Vo"
         DstTerminal   2
       }
     }
@@ -397,11 +396,11 @@ Plecs {
       SrcTerminal   2
       Points        [230, 75]
       Branch {
-        DstComponent  "Am1"
+        DstComponent  "Ir"
         DstTerminal   1
       }
       Branch {
-        DstComponent  "Vm2"
+        DstComponent  "Vo"
         DstTerminal   1
       }
     }
@@ -415,7 +414,7 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        DstComponent  "Vm1"
+        DstComponent  "Vi"
         DstTerminal   1
       }
     }
@@ -445,7 +444,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Am1"
+      SrcComponent  "Ir"
       SrcTerminal   3
       Points        [290, 50]
       DstComponent  "Goto2"
@@ -453,21 +452,21 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Vm2"
+      SrcComponent  "Vo"
       SrcTerminal   3
       DstComponent  "Goto1"
       DstTerminal   1
     }
     Connection {
       Type          Signal
-      SrcComponent  "Vm1"
+      SrcComponent  "Vi"
       SrcTerminal   3
       DstComponent  "Goto"
       DstTerminal   1
     }
     Connection {
       Type          Wire
-      SrcComponent  "Am1"
+      SrcComponent  "Ir"
       SrcTerminal   2
       Points        [355, 75]
       DstComponent  "L1"
@@ -482,4 +481,4 @@ Plecs {
     }
   }
 }
-DemoSignature "ByseEIjddeKqitPneOBoYr55nqhUMptpHeZueW9/ga4="
+DemoSignature "Lt8tLuAWwfUZFUPaqqy0guab6iXOW0v8XrQaDkCDFZQ="
