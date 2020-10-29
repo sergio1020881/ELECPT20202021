@@ -147,10 +147,10 @@ Plecs {
       Direction     up
       Flipped       off
       Location      [303, 119; 1281, 667]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAABUvwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAK9AA"
-"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAVIAAABmAP///wAAAAMAAAPSAAAAs/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA9IAAABQAP///wAAAxoAAAFSAAAA"
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAABOPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAANQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAK9AA"
+"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAATgAAABmAP///wAAAAMAAAPSAAAAzfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA9IAAABQAP///wAAAxoAAAE4AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAIADQAMABtAHMAAAAAAAAAAD+keuFHrhR7AAAABQB/+"
@@ -330,7 +330,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "Ir"
+        Value         "Iload"
         Show          off
       }
       Parameter {
@@ -384,7 +384,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "Ir"
+        Value         "Iload"
         Show          off
       }
       Parameter {
@@ -492,7 +492,7 @@ Plecs {
     }
     Component {
       Type          Product
-      Name          "Product"
+      Name          "Product_1"
       Show          on
       Position      [575, 475]
       Direction     up
@@ -510,7 +510,7 @@ Plecs {
     }
     Component {
       Type          Product
-      Name          "Priduct"
+      Name          "Product"
       Show          on
       Position      [390, 300]
       Direction     up
@@ -571,7 +571,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "Ir"
+        Value         "Iload"
         Show          off
       }
       Parameter {
@@ -804,6 +804,48 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Display
+      Name          "Il"
+      Show          on
+      Position      [315, 255]
+      Direction     up
+      Flipped       off
+      Frame         [-31, -11; 31, 11]
+      LabelPosition [0, 14]
+      LabelAlign    up
+      Parameter {
+        Variable      "Notation"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Precision"
+        Value         "4"
+        Show          off
+      }
+    }
+    Component {
+      Type          Display
+      Name          "Vinput"
+      Show          on
+      Position      [205, 255]
+      Direction     up
+      Flipped       off
+      Frame         [-31, -11; 31, 11]
+      LabelPosition [0, 14]
+      LabelAlign    up
+      Parameter {
+        Variable      "Notation"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Precision"
+        Value         "4"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "V_ac"
@@ -893,8 +935,16 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        DstComponent  "Priduct"
-        DstTerminal   3
+        Points        [360, 340]
+        Branch {
+          DstComponent  "Product"
+          DstTerminal   3
+        }
+        Branch {
+          Points        [155, 340; 155, 255]
+          DstComponent  "Vinput"
+          DstTerminal   1
+        }
       }
     }
     Connection {
@@ -908,13 +958,20 @@ Plecs {
       }
       Branch {
         Points        [345, 295]
-        DstComponent  "Priduct"
-        DstTerminal   2
+        Branch {
+          DstComponent  "Product"
+          DstTerminal   2
+        }
+        Branch {
+          Points        [250, 295; 250, 255]
+          DstComponent  "Il"
+          DstTerminal   1
+        }
       }
     }
     Connection {
       Type          Signal
-      SrcComponent  "Priduct"
+      SrcComponent  "Product"
       SrcTerminal   1
       DstComponent  "Discrete\nMean Value"
       DstTerminal   1
@@ -942,7 +999,7 @@ Plecs {
       Points        [495, 375]
       Branch {
         Points        [495, 470]
-        DstComponent  "Product"
+        DstComponent  "Product_1"
         DstTerminal   2
       }
       Branch {
@@ -956,7 +1013,7 @@ Plecs {
       SrcTerminal   2
       Points        [480, 480]
       Branch {
-        DstComponent  "Product"
+        DstComponent  "Product_1"
         DstTerminal   3
       }
       Branch {
@@ -975,7 +1032,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Product"
+      SrcComponent  "Product_1"
       SrcTerminal   1
       Points        [645, 475]
       Branch {
@@ -1082,4 +1139,4 @@ Plecs {
     }
   }
 }
-DemoSignature "n6pAXhc2OFbgmwTUJcfuHddvKZXGgTq/tEpsonaDkTQ="
+DemoSignature "sQ1TNuKcJKwLKT5+qys6ujVu7iH2NC3DGADGVviOsRo="
