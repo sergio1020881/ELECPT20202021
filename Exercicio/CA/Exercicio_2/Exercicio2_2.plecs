@@ -76,7 +76,7 @@ Plecs {
     }
     Component {
       Type          Voltmeter
-      Name          "Vm1"
+      Name          "Vin"
       Show          on
       Position      [435, 165]
       Direction     up
@@ -84,7 +84,7 @@ Plecs {
     }
     Component {
       Type          Voltmeter
-      Name          "Vm2"
+      Name          "Vload"
       Show          on
       Position      [515, 165]
       Direction     up
@@ -92,7 +92,7 @@ Plecs {
     }
     Component {
       Type          Ammeter
-      Name          "Am1"
+      Name          "Iload"
       Show          on
       Position      [575, 95]
       Direction     left
@@ -146,22 +146,21 @@ Plecs {
       Position      [625, 325]
       Direction     up
       Flipped       off
-      Location      [219, 71; 1197, 747]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAB7PwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAK9AA"
-"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAewAAABmAP///wAAAAMAAAPSAAAAmfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAA9IAAABQAP///wAAAxoAAAHsAAAA"
+      Location      [0, 63; 1366, 748]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAAB9fwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwIAAAK9AA"
+"ABmQAAAMgAAAB4+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAAfUAAABmAP///wAAAAMAAAVWAAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABVYAAABQAP///wAABJ4AAAH1AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAEAAAAIADQAMABtAHMAAAAAAAAAAD+keuFHrhR7AAAAAwB/+"
 "AAAAAAAAH/4AAAAAAAAAH/4AAAAAAAAf/gAAAAAAAAAf/gAAAAAAAB/+AAAAAAAAAAAAAAAAAAAAA"
 "AAAAAAAAAAAA=="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
-"wAAAGQAAAAEAAAAZAAAAAUAAABkAAAAAgAAAGQAAAADAAAAZAAAAAEAAABkAAAACAAAAGQAAAAJAA"
-"AAZAAAAAYAAABkAAAD0gAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAABWAAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AN8AAAAAQAAAAAAAAPoAAAAACc="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVYAA"
+"AALAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAALAAAAVgAAAAEAAAAAAAAAZAAAAAEAAA"
+"AAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAE"
+"AAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAABfAAAAAEAAAAAAAAD6AAA"
+"AAAn"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "=="
@@ -877,7 +876,7 @@ Plecs {
       Parameter {
         Variable      "V"
         Value         "50"
-        Show          off
+        Show          on
       }
     }
     Connection {
@@ -893,12 +892,12 @@ Plecs {
           DstTerminal   2
         }
         Branch {
-          DstComponent  "Vm1"
+          DstComponent  "Vin"
           DstTerminal   2
         }
       }
       Branch {
-        DstComponent  "Vm2"
+        DstComponent  "Vload"
         DstTerminal   2
       }
     }
@@ -908,11 +907,11 @@ Plecs {
       SrcTerminal   2
       Points        [515, 95]
       Branch {
-        DstComponent  "Am1"
+        DstComponent  "Iload"
         DstTerminal   1
       }
       Branch {
-        DstComponent  "Vm2"
+        DstComponent  "Vload"
         DstTerminal   1
       }
     }
@@ -926,7 +925,7 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        DstComponent  "Vm1"
+        DstComponent  "Vin"
         DstTerminal   1
       }
     }
@@ -956,7 +955,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Am1"
+      SrcComponent  "Iload"
       SrcTerminal   3
       Points        [575, 70]
       DstComponent  "Goto2"
@@ -964,14 +963,14 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Vm2"
+      SrcComponent  "Vload"
       SrcTerminal   3
       DstComponent  "Goto1"
       DstTerminal   1
     }
     Connection {
       Type          Signal
-      SrcComponent  "Vm1"
+      SrcComponent  "Vin"
       SrcTerminal   3
       DstComponent  "Goto"
       DstTerminal   1
@@ -1001,7 +1000,7 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "Am1"
+      SrcComponent  "Iload"
       SrcTerminal   2
       Points        [640, 95]
       DstComponent  "V_dc"
@@ -1016,4 +1015,4 @@ Plecs {
     }
   }
 }
-DemoSignature "C9ixmBdBXoV4DQVFRcBIW3LDqey66InmT/r/Agjk9vM="
+DemoSignature "9Xc//kCUdFuEga3BdTk/EXcuyOEVGg48dgagT+JFB28="
