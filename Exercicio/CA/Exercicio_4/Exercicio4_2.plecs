@@ -2,8 +2,8 @@ Plecs {
   Name          "Exercicio4_2"
   Version       "4.3"
   CircuitModel  "ContStateSpace"
-  StartTime     "0.0"
-  StopTime      "0.045"
+  StartTime     "0"
+  StopTime      "0.040"
   Timeout       ""
   Solver        "radau"
   MaxStep       "1e-3"
@@ -46,7 +46,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [484, 89; 1305, 742]
+    Location      [232, 198; 1053, 851]
     ZoomFactor    1
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -55,7 +55,7 @@ Plecs {
       Type          Subsystem
       Name          "PF"
       Show          on
-      Position      [550, 400]
+      Position      [320, 410]
       Direction     up
       Flipped       off
       Frame         [-20, -20; 20, 20]
@@ -81,7 +81,7 @@ Plecs {
         Direction     right
       }
       Schematic {
-        Location      [0, 0; 821, 465]
+        Location      [154, 184; 975, 649]
         ZoomFactor    1
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -514,7 +514,7 @@ Plecs {
       Type          Display
       Name          "Power Factor"
       Show          on
-      Position      [625, 390]
+      Position      [395, 400]
       Direction     up
       Flipped       off
       Frame         [-31, -11; 31, 11]
@@ -535,7 +535,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [490, 380]
+      Position      [260, 390]
       Direction     right
       Flipped       off
       Parameter {
@@ -553,7 +553,7 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [490, 415]
+      Position      [260, 425]
       Direction     right
       Flipped       off
       Parameter {
@@ -568,105 +568,29 @@ Plecs {
       }
     }
     Component {
-      Type          ACVoltageSource
-      Name          "V_ac"
-      Show          on
-      Position      [255, 160]
-      Direction     down
-      Flipped       on
-      Parameter {
-        Variable      "V"
-        Value         "230*sqrt(2)"
-        Show          on
-      }
-      Parameter {
-        Variable      "w"
-        Value         "2*pi*50"
-        Show          on
-      }
-      Parameter {
-        Variable      "phi"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
-      Type          Voltmeter
-      Name          "Vm1"
-      Show          on
-      Position      [380, 160]
-      Direction     up
-      Flipped       off
-    }
-    Component {
-      Type          Voltmeter
-      Name          "Vm2"
-      Show          on
-      Position      [495, 155]
-      Direction     up
-      Flipped       off
-    }
-    Component {
-      Type          Ammeter
-      Name          "Iload"
-      Show          on
-      Position      [540, 90]
-      Direction     left
-      Flipped       off
-    }
-    Component {
-      Type          Resistor
-      Name          "R1"
-      Show          on
-      Position      [615, 170]
-      Direction     up
-      Flipped       off
-      Parameter {
-        Variable      "R"
-        Value         "10"
-        Show          on
-      }
-    }
-    Component {
-      Type          Diode
-      Name          "D1"
-      Show          on
-      Position      [415, 90]
-      Direction     left
-      Flipped       off
-      Parameter {
-        Variable      "Vf"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "Ron"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "thermal"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "T_init"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [375, 410]
+      Position      [185, 405]
       Direction     up
       Flipped       off
-      Location      [0, 0; 0, 0]
-      State         ""
-      SavedViews    ""
-      HeaderState   ""
-      PlotPalettes  ""
+      Location      [0, 63; 1366, 748]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABVYAAAKSAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"AAAAGQAAAAJAAAAZAAAAAIAAABkAAAAAwAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAEAA"
+"AAZAAAAAUAAABkAAAAgQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAABaAAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AAnAAAAAQAAAAAAAAPoAAAAACc="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"=="
       Axes          "3"
       TimeRange     "0"
       ScrollingMode "1"
@@ -746,64 +670,10 @@ Plecs {
       }
     }
     Component {
-      Type          Goto
-      Name          "Goto"
-      Show          off
-      Position      [415, 145]
-      Direction     right
-      Flipped       off
-      Parameter {
-        Variable      "Tag"
-        Value         "Vin"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto1"
-      Show          off
-      Position      [535, 145]
-      Direction     right
-      Flipped       off
-      Parameter {
-        Variable      "Tag"
-        Value         "Vout"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
-      Type          Goto
-      Name          "Goto2"
-      Show          off
-      Position      [565, 65]
-      Direction     right
-      Flipped       off
-      Parameter {
-        Variable      "Tag"
-        Value         "Iload"
-        Show          off
-      }
-      Parameter {
-        Variable      "Visibility"
-        Value         "1"
-        Show          off
-      }
-    }
-    Component {
       Type          From
       Name          "From5"
       Show          off
-      Position      [315, 375]
+      Position      [125, 370]
       Direction     right
       Flipped       off
       Parameter {
@@ -821,7 +691,7 @@ Plecs {
       Type          From
       Name          "From6"
       Show          off
-      Position      [315, 400]
+      Position      [125, 395]
       Direction     right
       Flipped       off
       Parameter {
@@ -839,7 +709,149 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [315, 425]
+      Position      [125, 420]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Iload"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          ACVoltageSource
+      Name          "V_ac"
+      Show          on
+      Position      [85, 185]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "230*sqrt(2)"
+        Show          on
+      }
+      Parameter {
+        Variable      "w"
+        Value         "2*pi*50"
+        Show          on
+      }
+      Parameter {
+        Variable      "phi"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Voltmeter
+      Name          "Vinput"
+      Show          on
+      Position      [225, 185]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          Voltmeter
+      Name          "Voutput"
+      Show          on
+      Position      [340, 180]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          Ammeter
+      Name          "Iload"
+      Show          on
+      Position      [385, 115]
+      Direction     left
+      Flipped       off
+    }
+    Component {
+      Type          Resistor
+      Name          "R1"
+      Show          on
+      Position      [460, 195]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "10"
+        Show          on
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D1"
+      Show          on
+      Position      [260, 115]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto"
+      Show          off
+      Position      [260, 170]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Vin"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto1"
+      Show          off
+      Position      [380, 170]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Vout"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto2"
+      Show          off
+      Position      [410, 90]
       Direction     right
       Flipped       off
       Parameter {
@@ -857,7 +869,7 @@ Plecs {
       Type          DCVoltageSource
       Name          "V_dc"
       Show          on
-      Position      [615, 115]
+      Position      [460, 140]
       Direction     down
       Flipped       on
       Parameter {
@@ -870,7 +882,7 @@ Plecs {
       Type          Inductor
       Name          "L1"
       Show          on
-      Position      [615, 235]
+      Position      [460, 260]
       Direction     down
       Flipped       off
       Parameter {
@@ -888,7 +900,7 @@ Plecs {
       Type          Ground
       Name          "Ground"
       Show          off
-      Position      [380, 305]
+      Position      [225, 330]
       Direction     up
       Flipped       off
     }
@@ -896,45 +908,35 @@ Plecs {
       Type          Switch
       Name          "S1"
       Show          on
-      Position      [315, 90]
+      Position      [160, 115]
       Direction     left
       Flipped       off
       Parameter {
         Variable      "s_init"
         Value         "0"
-        Show          on
+        Show          off
       }
     }
     Component {
-      Type          PulseGenerator
-      Name          "Pulse\nGenerator"
+      Type          Step
+      Name          "Step"
       Show          on
-      Position      [275, 40]
+      Position      [100, 45]
       Direction     right
       Flipped       off
       Parameter {
-        Variable      "Hi"
-        Value         "1"
+        Variable      "Time"
+        Value         "5e-3"
         Show          off
       }
       Parameter {
-        Variable      "Lo"
+        Variable      "Before"
         Value         "0"
         Show          off
       }
       Parameter {
-        Variable      "f"
-        Value         "25"
-        Show          off
-      }
-      Parameter {
-        Variable      "DutyCycle"
-        Value         "0.1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Delay"
-        Value         "0.02"
+        Variable      "After"
+        Value         "1"
         Show          off
       }
       Parameter {
@@ -954,7 +956,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From4"
       SrcTerminal   1
-      Points        [505, 415; 505, 400]
+      Points        [275, 425; 275, 410]
       DstComponent  "PF"
       DstTerminal   2
     }
@@ -962,29 +964,15 @@ Plecs {
       Type          Signal
       SrcComponent  "From3"
       SrcTerminal   1
-      Points        [505, 380; 505, 390]
+      Points        [275, 390; 275, 400]
       DstComponent  "PF"
       DstTerminal   1
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "D1"
-      SrcTerminal   1
-      Points        [380, 90]
-      Branch {
-        DstComponent  "S1"
-        DstTerminal   2
-      }
-      Branch {
-        DstComponent  "Vm1"
-        DstTerminal   1
-      }
     }
     Connection {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [335, 425; 335, 420]
+      Points        [145, 420; 145, 415]
       DstComponent  "Scope1"
       DstTerminal   3
     }
@@ -992,7 +980,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From6"
       SrcTerminal   1
-      Points        [335, 400; 335, 410]
+      Points        [145, 395; 145, 405]
       DstComponent  "Scope1"
       DstTerminal   2
     }
@@ -1000,29 +988,43 @@ Plecs {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
-      Points        [340, 375; 340, 400]
+      Points        [150, 370; 150, 395]
       DstComponent  "Scope1"
       DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D1"
+      SrcTerminal   1
+      Points        [225, 115]
+      Branch {
+        DstComponent  "S1"
+        DstTerminal   2
+      }
+      Branch {
+        DstComponent  "Vinput"
+        DstTerminal   1
+      }
     }
     Connection {
       Type          Signal
       SrcComponent  "Iload"
       SrcTerminal   3
-      Points        [540, 65]
+      Points        [385, 90]
       DstComponent  "Goto2"
       DstTerminal   1
     }
     Connection {
       Type          Signal
-      SrcComponent  "Vm2"
+      SrcComponent  "Voutput"
       SrcTerminal   3
-      Points        [515, 155]
+      Points        [360, 180]
       DstComponent  "Goto1"
       DstTerminal   1
     }
     Connection {
       Type          Signal
-      SrcComponent  "Vm1"
+      SrcComponent  "Vinput"
       SrcTerminal   3
       DstComponent  "Goto"
       DstTerminal   1
@@ -1031,13 +1033,13 @@ Plecs {
       Type          Wire
       SrcComponent  "Iload"
       SrcTerminal   1
-      Points        [495, 90]
+      Points        [340, 115]
       Branch {
         DstComponent  "D1"
         DstTerminal   2
       }
       Branch {
-        DstComponent  "Vm2"
+        DstComponent  "Voutput"
         DstTerminal   1
       }
     }
@@ -1045,7 +1047,7 @@ Plecs {
       Type          Wire
       SrcComponent  "V_dc"
       SrcTerminal   1
-      Points        [615, 90]
+      Points        [460, 115]
       DstComponent  "Iload"
       DstTerminal   2
     }
@@ -1053,21 +1055,21 @@ Plecs {
       Type          Wire
       SrcComponent  "V_ac"
       SrcTerminal   2
-      Points        [255, 275; 380, 275]
+      Points        [85, 300; 225, 300]
       Branch {
-        Points        [495, 275]
+        Points        [340, 300]
         Branch {
-          DstComponent  "Vm2"
+          DstComponent  "Voutput"
           DstTerminal   2
         }
         Branch {
-          Points        [615, 275]
+          Points        [460, 300]
           DstComponent  "L1"
           DstTerminal   1
         }
       }
       Branch {
-        DstComponent  "Vm1"
+        DstComponent  "Vinput"
         DstTerminal   2
       }
       Branch {
@@ -1093,18 +1095,18 @@ Plecs {
       Type          Wire
       SrcComponent  "V_ac"
       SrcTerminal   1
-      Points        [255, 90]
+      Points        [85, 115]
       DstComponent  "S1"
       DstTerminal   1
     }
     Connection {
       Type          Signal
-      SrcComponent  "Pulse\nGenerator"
+      SrcComponent  "Step"
       SrcTerminal   1
-      Points        [315, 40]
+      Points        [160, 45]
       DstComponent  "S1"
       DstTerminal   3
     }
   }
 }
-DemoSignature "aioagvcj9onj/scWx/aCi8vf2gMB32VnvXi0Gn0L10Q="
+DemoSignature "O85cDhCdpdQuIbOrWhju/X2+c8bYnOKdM03TjwUZ5GM="

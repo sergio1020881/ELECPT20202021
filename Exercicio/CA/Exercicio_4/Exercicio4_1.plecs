@@ -46,7 +46,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [752, 113; 1289, 598]
+    Location      [336, 127; 873, 612]
     ZoomFactor    1
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -143,7 +143,7 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [320, 405]
+      Position      [185, 410]
       Direction     up
       Flipped       off
       Location      [71, 126; 1233, 708]
@@ -302,7 +302,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [260, 370]
+      Position      [125, 375]
       Direction     right
       Flipped       off
       Parameter {
@@ -320,7 +320,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [260, 395]
+      Position      [125, 400]
       Direction     right
       Flipped       off
       Parameter {
@@ -338,7 +338,7 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [260, 420]
+      Position      [125, 425]
       Direction     right
       Flipped       off
       Parameter {
@@ -450,7 +450,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
-      Points        [280, 420; 280, 415]
+      Points        [145, 425; 145, 420]
       DstComponent  "Scope"
       DstTerminal   3
     }
@@ -458,7 +458,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
-      Points        [280, 395; 280, 405]
+      Points        [145, 400; 145, 410]
       DstComponent  "Scope"
       DstTerminal   2
     }
@@ -466,7 +466,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From"
       SrcTerminal   1
-      Points        [285, 370; 285, 395]
+      Points        [150, 375; 150, 400]
       DstComponent  "Scope"
       DstTerminal   1
     }
@@ -573,4 +573,4 @@ Plecs {
     }
   }
 }
-DemoSignature "l+UBV/jVbyX+pagD2PFKjt4nQZOCa+/Uy5wVkgg6Cfk="
+DemoSignature "Lznfta0AuBN86zBzQaY+RXdSWQaCLWoW+O8v1zIzwl4="

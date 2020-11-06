@@ -46,7 +46,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [541, 89; 1281, 592]
+    Location      [541, 89; 1281, 620]
     ZoomFactor    1
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -55,7 +55,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [105, 400]
+      Position      [80, 385]
       Direction     right
       Flipped       off
       Parameter {
@@ -73,7 +73,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [105, 420]
+      Position      [80, 410]
       Direction     right
       Flipped       off
       Parameter {
@@ -209,22 +209,21 @@ Plecs {
       Flipped       off
       Location      [0, 63; 1366, 748]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAVWAAAAmfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABVYAAABQAP///wAABVYAAAH1AAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAAKwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAVWAAAA2vw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABVYAAABQAP///wAABVYAAAG0AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
-"AAAAGQAAAAJAAAAZAAAAAIAAABkAAAAAwAAAGQAAAABAAAAZAAAAAYAAABkAAAABwAAAGQAAAAEAA"
-"AAZAAAAAUAAABkAAAFRQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAABWAAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"ATvAAAAAQAAAAAAAAPoAAAAACc="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVYAA"
+"AALAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAALAAAAawAAAAEAAAAAAAAAZAAAAAEAAA"
+"AAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAE"
+"AAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAABZwAAAAEAAAAAAAAD6AAA"
+"AAAn"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-"=="
-      Axes          "3"
+"AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "4"
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -265,11 +264,32 @@ Plecs {
         KeepBaseline  off
         BaselineValue 0
       }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
       Fourier {
         SingleXAxis   on
         AxisLabel     "Frequency"
         Scaling       0
         PhaseDisplay  0
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
         Axis {
           Name          ""
           AutoScale     1
@@ -346,7 +366,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [335, 315]
+      Position      [330, 315]
       Direction     right
       Flipped       off
       Parameter {
@@ -372,7 +392,7 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [105, 440]
+      Position      [80, 440]
       Direction     right
       Flipped       off
       Parameter {
@@ -474,7 +494,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux"
       Show          off
-      Position      [155, 420]
+      Position      [130, 410]
       Direction     right
       Flipped       off
       Parameter {
@@ -508,7 +528,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [160, 480]
+      Position      [130, 485]
       Direction     right
       Flipped       off
       Parameter {
@@ -560,7 +580,7 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [160, 455]
+      Position      [130, 460]
       Direction     right
       Flipped       off
       Parameter {
@@ -604,7 +624,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux1"
       Show          off
-      Position      [190, 465]
+      Position      [195, 470]
       Direction     right
       Flipped       off
       Parameter {
@@ -1129,6 +1149,29 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Sum
+      Name          "Subtract"
+      Show          off
+      Position      [195, 370]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "IconShape"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "+-"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
       SrcComponent  "Ground"
@@ -1190,7 +1233,6 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm3"
       SrcTerminal   3
-      Points        [315, 295]
       DstComponent  "Goto3"
       DstTerminal   1
     }
@@ -1266,14 +1308,6 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "From"
-      SrcTerminal   1
-      Points        [130, 400; 130, 410]
-      DstComponent  "Mux"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
       DstComponent  "Mux"
@@ -1283,7 +1317,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
-      Points        [130, 440; 130, 430]
+      Points        [115, 440]
       DstComponent  "Mux"
       DstTerminal   4
     }
@@ -1298,7 +1332,6 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux"
       SrcTerminal   1
-      Points        [210, 420; 210, 415]
       DstComponent  "Scope"
       DstTerminal   1
     }
@@ -1336,32 +1369,9 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux1"
       SrcTerminal   1
-      Points        [225, 465; 225, 425]
+      Points        [225, 470; 225, 420]
       DstComponent  "Scope"
       DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From4"
-      SrcTerminal   1
-      Points        [175, 455]
-      DstComponent  "Mux1"
-      DstTerminal   2
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "From3"
-      SrcTerminal   1
-      Points        [175, 480]
-      Branch {
-        DstComponent  "Mux1"
-        DstTerminal   3
-      }
-      Branch {
-        Points        [175, 495; 240, 495; 240, 435]
-        DstComponent  "Scope"
-        DstTerminal   3
-      }
     }
     Connection {
       Type          Signal
@@ -1386,6 +1396,61 @@ Plecs {
       DstComponent  "PF"
       DstTerminal   1
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "From3"
+      SrcTerminal   1
+      Points        [160, 485]
+      Branch {
+        Points        [160, 480; 175, 480; 175, 475]
+        DstComponent  "Mux1"
+        DstTerminal   3
+      }
+      Branch {
+        Points        [160, 495; 240, 495; 240, 430]
+        DstComponent  "Scope"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From"
+      SrcTerminal   1
+      Points        [115, 385]
+      Branch {
+        DstComponent  "Mux"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [115, 365]
+        DstComponent  "Subtract"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From4"
+      SrcTerminal   1
+      Points        [160, 460]
+      Branch {
+        Points        [160, 465]
+        DstComponent  "Mux1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [160, 375]
+        DstComponent  "Subtract"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Subtract"
+      SrcTerminal   1
+      Points        [220, 370; 220, 440]
+      DstComponent  "Scope"
+      DstTerminal   4
+    }
   }
 }
-DemoSignature "rwB3FbiIvysoEybetWc2wRDoJOghNeG19aPxRa5S/qY="
+DemoSignature "6Vf5I4pHn1WMIBw8cZ4ggRImp//Fl74OuwIowEKdsCs="
