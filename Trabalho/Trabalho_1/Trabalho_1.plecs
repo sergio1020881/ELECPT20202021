@@ -135,7 +135,7 @@ Plecs {
       Type          ACVoltageSource
       Name          "Vi1"
       Show          on
-      Position      [90, 115]
+      Position      [80, 115]
       Direction     left
       Flipped       on
       Parameter {
@@ -209,7 +209,7 @@ Plecs {
       Flipped       off
       Location      [0, 63; 1366, 748]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAIQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"G0AQQByAGUAYQAAAAAA/////wAAANQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAVWAAAA2vw"
 "BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABVYAAABQAP///wAABVYAAAG0AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
@@ -228,7 +228,7 @@ Plecs {
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
@@ -807,7 +807,7 @@ Plecs {
         }
         Component {
           Type          Product
-          Name          "Priduct"
+          Name          "Product1"
           Show          on
           Position      [195, 105]
           Direction     up
@@ -1032,7 +1032,7 @@ Plecs {
         }
         Connection {
           Type          Signal
-          SrcComponent  "Priduct"
+          SrcComponent  "Product1"
           SrcTerminal   1
           DstComponent  "Discrete\nMean Value"
           DstTerminal   1
@@ -1079,7 +1079,7 @@ Plecs {
           }
           Branch {
             Points        [150, 100]
-            DstComponent  "Priduct"
+            DstComponent  "Product1"
             DstTerminal   2
           }
         }
@@ -1093,7 +1093,7 @@ Plecs {
             DstTerminal   1
           }
           Branch {
-            DstComponent  "Priduct"
+            DstComponent  "Product1"
             DstTerminal   3
           }
         }
@@ -1144,7 +1144,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "Vo"
+        Value         "Vin1"
         Show          off
       }
       Parameter {
@@ -1162,7 +1162,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "Io"
+        Value         "Is1"
         Show          off
       }
       Parameter {
@@ -1230,6 +1230,32 @@ Plecs {
       Parameter {
         Variable      "Tag"
         Value         "Is2"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Ammeter
+      Name          "Am3"
+      Show          on
+      Position      [125, 115]
+      Direction     left
+      Flipped       off
+    }
+    Component {
+      Type          Goto
+      Name          "Goto7"
+      Show          off
+      Position      [165, 80]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Is1"
         Show          off
       }
       Parameter {
@@ -1313,20 +1339,6 @@ Plecs {
       }
       Branch {
         DstComponent  "Vm2"
-        DstTerminal   1
-      }
-    }
-    Connection {
-      Type          Wire
-      SrcComponent  "Vi1"
-      SrcTerminal   1
-      Points        [155, 115]
-      Branch {
-        DstComponent  "Vm1"
-        DstTerminal   1
-      }
-      Branch {
-        DstComponent  "D1"
         DstTerminal   1
       }
     }
@@ -1541,6 +1553,35 @@ Plecs {
       DstComponent  "Scope"
       DstTerminal   5
     }
+    Connection {
+      Type          Wire
+      SrcComponent  "Vi1"
+      SrcTerminal   1
+      DstComponent  "Am3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Vm1"
+      SrcTerminal   1
+      Points        [155, 115]
+      Branch {
+        DstComponent  "D1"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Am3"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am3"
+      SrcTerminal   3
+      Points        [125, 80]
+      DstComponent  "Goto7"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "aIF2i3lZTKiRua8GjfaAw3zBUPvRzm5ktfDJnZDkQhQ="
+DemoSignature "pGxoWC0uXriLmN6EV+vynO+sGmNuVufH9Fwd2Q7+hOc="
