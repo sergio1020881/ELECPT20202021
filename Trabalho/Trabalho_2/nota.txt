@@ -1,1 +1,6 @@
 RMS=AVG em corrente continua.
+
+Para ficar Generico:
+1º Somar as Areas
+2º Dividir pelo Periodo
+
