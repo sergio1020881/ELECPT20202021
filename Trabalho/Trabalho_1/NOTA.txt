@@ -1,0 +1,4 @@
+O valor RMS só é usado em corrente alternada, pois em corrente continua é igual ao Average. 
+O RMS apenas é usado para anular a alternancia, ou seja é o seu modulo e aceitar os valores todos como positivo.
+
+ 
