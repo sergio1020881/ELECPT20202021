@@ -4,3 +4,5 @@ Para ficar Generico:
 1º Somar as Areas
 2º Dividir pelo Periodo
 
+Parece que Nestes circuitos de tiristores o factor de potencia 
+também é um indicador de rendimento além da influencia de desfazamento.
