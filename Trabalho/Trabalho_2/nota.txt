@@ -1,1 +1,1 @@
-RMS=AVG em corrent continua.
+RMS=AVG em corrente continua.
