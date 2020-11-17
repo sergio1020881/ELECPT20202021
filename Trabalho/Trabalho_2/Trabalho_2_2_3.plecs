@@ -1,5 +1,5 @@
 Plecs {
-  Name          "Trabalho_2_2_2"
+  Name          "Trabalho_2_2_3"
   Version       "4.3"
   CircuitModel  "ContStateSpace"
   StartTime     "0"
@@ -1649,4 +1649,4 @@ Plecs {
     }
   }
 }
-DemoSignature "KPgNo7JCZ6kJvvejyHXr2+K9YFBaCM9xkr++I8mCA08="
+DemoSignature "AR+dZHhB/9bqDlu6Csqbhl7Ic6L4dcXmj63c0incyyg="
