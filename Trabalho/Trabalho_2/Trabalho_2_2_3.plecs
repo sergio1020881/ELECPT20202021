@@ -1,5 +1,5 @@
 Plecs {
-  Name          "Trabalho_2_2"
+  Name          "Trabalho_2_2_2"
   Version       "4.3"
   CircuitModel  "ContStateSpace"
   StartTime     "0"
@@ -576,9 +576,9 @@ Plecs {
       Flipped       off
       Location      [0, 63; 1366, 748]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAADQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAVWAAAAzfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABVYAAABQAP///wAABVYAAAHBAAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAANQA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABmAP///wAAAAMAAAVWAAAA5/w"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABVYAAABQAP///wAABVYAAAGnAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -589,8 +589,9 @@ Plecs {
 "AAAn"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-"AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      Axes          "4"
+"AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAA"
+"AAAAAAAA="
+      Axes          "5"
       TimeRange     "0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -642,11 +643,32 @@ Plecs {
         KeepBaseline  off
         BaselineValue 0
       }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
       Fourier {
         SingleXAxis   on
         AxisLabel     "Frequency"
         Scaling       0
         PhaseDisplay  0
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
         Axis {
           Name          ""
           AutoScale     1
@@ -729,7 +751,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [210, 465]
+      Position      [190, 465]
       Direction     right
       Flipped       off
       Parameter {
@@ -825,7 +847,7 @@ Plecs {
       Type          Goto
       Name          "Goto1"
       Show          off
-      Position      [435, 240]
+      Position      [425, 230]
       Direction     right
       Flipped       off
       Parameter {
@@ -938,7 +960,7 @@ Plecs {
       Type          From
       Name          "From8"
       Show          off
-      Position      [220, 505]
+      Position      [170, 480]
       Direction     right
       Flipped       off
       Parameter {
@@ -1158,7 +1180,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [220, 530]
+      Position      [150, 495]
       Direction     right
       Flipped       off
       Parameter {
@@ -1185,6 +1207,111 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Capacitor
+      Name          "C1"
+      Show          on
+      Position      [285, 205]
+      Direction     left
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         "0.5e-9"
+        Show          on
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D1"
+      Show          on
+      Position      [445, 305]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "Vf"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "1e-3"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Sum
+      Name          "Subtract"
+      Show          off
+      Position      [295, 235]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "IconShape"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "+-"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "11"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto5"
+      Show          off
+      Position      [235, 235]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Vak"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From10"
+      Show          off
+      Position      [215, 485]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Vak"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
     Connection {
       Type          Signal
       SrcComponent  "PF"
@@ -1206,22 +1333,6 @@ Plecs {
       SrcTerminal   1
       Points        [515, 430; 515, 440]
       DstComponent  "PF"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Voutput"
-      SrcTerminal   3
-      Points        [400, 240]
-      DstComponent  "Goto1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Signal
-      SrcComponent  "Vinput"
-      SrcTerminal   3
-      Points        [220, 320]
-      DstComponent  "Goto"
       DstTerminal   1
     }
     Connection {
@@ -1347,15 +1458,22 @@ Plecs {
       Branch {
         Points        [385, 350]
         Branch {
-          Points        [485, 350]
+          Points        [445, 350]
           Branch {
-            DstComponent  "L1"
-            DstTerminal   2
+            Points        [485, 350]
+            Branch {
+              DstComponent  "L1"
+              DstTerminal   2
+            }
+            Branch {
+              Points        [580, 350]
+              DstComponent  "VL"
+              DstTerminal   2
+            }
           }
           Branch {
-            Points        [580, 350]
-            DstComponent  "VL"
-            DstTerminal   2
+            DstComponent  "D1"
+            DstTerminal   1
           }
         }
         Branch {
@@ -1389,14 +1507,29 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        Points        [385, 140]
+        Points        [445, 140]
         Branch {
-          DstComponent  "Thy1"
-          DstTerminal   2
+          Points        [385, 140]
+          Branch {
+            Points        [345, 140]
+            Branch {
+              DstComponent  "Thy1"
+              DstTerminal   2
+            }
+            Branch {
+              Points        [345, 205]
+              DstComponent  "C1"
+              DstTerminal   1
+            }
+          }
+          Branch {
+            DstComponent  "Voutput"
+            DstTerminal   1
+          }
         }
         Branch {
-          DstComponent  "Voutput"
-          DstTerminal   1
+          DstComponent  "D1"
+          DstTerminal   2
         }
       }
     }
@@ -1420,7 +1553,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux2"
       SrcTerminal   1
-      Points        [225, 435; 225, 450]
+      Points        [225, 435; 225, 445]
       DstComponent  "Scope1"
       DstTerminal   1
     }
@@ -1428,7 +1561,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [240, 465; 240, 460]
+      Points        [240, 465; 240, 455]
       DstComponent  "Scope1"
       DstTerminal   2
     }
@@ -1436,7 +1569,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From8"
       SrcTerminal   1
-      Points        [245, 505; 245, 470]
+      Points        [245, 480; 245, 465]
       DstComponent  "Scope1"
       DstTerminal   3
     }
@@ -1444,7 +1577,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From9"
       SrcTerminal   1
-      Points        [255, 530]
+      Points        [255, 495]
       DstComponent  "Scope1"
       DstTerminal   4
     }
@@ -1454,14 +1587,66 @@ Plecs {
       SrcTerminal   1
       Points        [110, 140; 195, 140]
       Branch {
-        DstComponent  "Thy1"
-        DstTerminal   1
+        Points        [230, 140]
+        Branch {
+          DstComponent  "Thy1"
+          DstTerminal   1
+        }
+        Branch {
+          Points        [230, 205]
+          DstComponent  "C1"
+          DstTerminal   2
+        }
       }
       Branch {
         DstComponent  "Vinput"
         DstTerminal   1
       }
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vinput"
+      SrcTerminal   3
+      Points        [215, 320]
+      Branch {
+        Points        [220, 320]
+        DstComponent  "Goto"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [215, 300; 325, 300]
+        DstComponent  "Subtract"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Voutput"
+      SrcTerminal   3
+      Points        [400, 230]
+      Branch {
+        DstComponent  "Goto1"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "Subtract"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Subtract"
+      SrcTerminal   1
+      DstComponent  "Goto5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From10"
+      SrcTerminal   1
+      DstComponent  "Scope1"
+      DstTerminal   5
+    }
   }
 }
-DemoSignature "00U7n/KdFst4FBwjxoEwwG5PJsDkOlTqYw3kZWWqcl8="
+DemoSignature "KPgNo7JCZ6kJvvejyHXr2+K9YFBaCM9xkr++I8mCA08="
