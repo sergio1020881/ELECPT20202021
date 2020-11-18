@@ -1,0 +1,84 @@
+\documentclass[titlepage, a4paper, 10pt, reqno, openany]{report}
+\input{./input/PREAMBLE}
+\begin{document}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesection.\thesubsection.\arabic{subsubsection}}
+\pagestyle{plain}%plain headings empty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Trabalho 3 Prep}
+{\bf Nome: Sérgio Santos} \\
+\hspace*{0.51cm}{\bf nº: 1020881}\\
+\section{Esquema}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{./image/esquema.jpg}\\
+	\caption{Esquema}
+\end{figure}
+Não sei se devo acrescentar um drive na saída do sinal controlado, caso sim posso por um circuito lógico buffer. 
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Material}
+\begin{minipage}[t]{.60\linewidth}
+	%	\quad List 1:
+	\begin{itemize}
+		\setlength\itemsep{-0.5em}
+		\item Resistencias \\
+		1/4 Watt, varias.
+		\item Potenciometro multivolta \\
+		100Kohm e 1Kohm
+		\item Condensador \\
+		10nF, 100nF  \\
+		2x Electrolitico 10uF
+		\item Diodo 1N4148 \\
+		\item Fusivel 800mA \\
+		\item Led Verde \\
+	\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{.31\linewidth}
+	%	\quad List 2:
+	\begin{itemize}
+		\setlength\itemsep{-0.5em}
+		\item TL084 \\
+		Quand Opamp Chip \\
+		14 Pinos \\
+		\item Ficha Alimentação \\
+	\end{itemize}
+\end{minipage}\\
+\\
+Circuito Funciona de 10 Volt até 19 Volt testado em bancada, sendo necessario adjuste fino para calibração pelo Potenciómetro de  1Kohm. 
+Pode se sempre consultar os {\it datasheets} dos componntes.\\
+
+Ver Imagem do PCB caso duvidas. \\
+\section{Simulação}
+%\begin{comment}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{./image/placa_1.jpg}\\
+	\caption{Top View}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{./image/placa_2.jpg}\\
+	\caption{Back View}
+\end{figure}\par
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Simulação}
+%\begin{comment}	
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{./image/quadrado.jpg}\\
+	\caption{Onda Quadrada}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{./image/triangulo.jpg}\\
+	\caption{Onda Triangular}
+\end{figure}\par
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\footnote{Apontamentos}
+%
+	\end{document}
+%%%EOF%%%
