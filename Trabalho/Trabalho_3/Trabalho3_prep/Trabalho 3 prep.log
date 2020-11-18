@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  18 NOV 2020 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  18 NOV 2020 22:16
 entering extended mode
 **"./Trabalho 3 prep.tex"
 ("Trabalho 3 prep.tex"
@@ -1367,15 +1367,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
  ("Trabalho 3 prep.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
-
-
-Package rerunfilecheck Warning: File `"Trabalho 3 prep".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Trabalho 3 prep".out':
-(rerunfilecheck)             Before: 3EE78F8319FE35B42CB205BAF1B6E2E9;193
-(rerunfilecheck)             After:  ADA71C77BA055ED3C4BE6FD1935832AB;207.
+Package rerunfilecheck Info: File `"Trabalho 3 prep".out' has not changed.
+(rerunfilecheck)             Checksum: ADA71C77BA055ED3C4BE6FD1935832AB;207.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
  ) 
 Here is how much of TeX's memory you used:
@@ -1393,7 +1386,7 @@ st, replaced by a fixed one
 onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/u
 rw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><
 C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Trabalho 3 prep.pdf" (5 pages, 7689625 bytes).
+Output written on "Trabalho 3 prep.pdf" (5 pages, 7689638 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  17 named destinations out of 1000 (max. 500000)
