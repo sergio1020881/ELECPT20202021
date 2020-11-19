@@ -13,3 +13,7 @@ P = R x Io = Vo méd x Io
 
 Acaba por ser mais practico.
 
+Tipo de exercicio:
+-Puramente resistivo
+-Corrente constante ou L suficientement grande
+
