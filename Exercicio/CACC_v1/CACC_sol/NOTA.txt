@@ -1,0 +1,15 @@
+Quando se fala de L suficientement Grande ou corrente constante na carga, 
+tem se outro modo de calcular:
+
+1º
+Vo méd e Vo rms respeita definição e tensão não se altera, ou seja não tem pontos com interrupção.
+
+2º
+Io = Io méd = io rms = vo méd / Resistencia da carga.
+
+3º
+P = R x Io = Vo méd x Io
+
+
+Acaba por ser mais practico.
+
