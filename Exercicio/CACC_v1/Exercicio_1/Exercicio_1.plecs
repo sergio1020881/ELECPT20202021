@@ -46,7 +46,7 @@ Plecs {
   ScriptsDialogGeometry ""
   ScriptsDialogSplitterPos "0"
   Schematic {
-    Location      [232, 98; 1053, 751]
+    Location      [471, 71; 1292, 724]
     ZoomFactor    1
     SliderPosition [0, 0]
     ShowBrowser   off
@@ -540,7 +540,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "V1in"
+        Value         "Vout"
         Show          off
       }
       Parameter {
@@ -1252,4 +1252,4 @@ Plecs {
     }
   }
 }
-DemoSignature "Q5inWL6Omi2eAzPHpGfbKIJtmIE2yFNQOzcLFFXodNY="
+DemoSignature "g17gIIV4Nrb9iqOlwAeDtNay/ESQTYzhStaYXI6boAI="

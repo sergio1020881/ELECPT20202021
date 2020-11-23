@@ -55,7 +55,7 @@ Plecs {
       Type          Subsystem
       Name          "PF"
       Show          on
-      Position      [560, 450]
+      Position      [525, 520]
       Direction     up
       Flipped       off
       Frame         [-20, -20; 20, 20]
@@ -514,7 +514,7 @@ Plecs {
       Type          Display
       Name          "Power Factor"
       Show          on
-      Position      [635, 440]
+      Position      [600, 510]
       Direction     up
       Flipped       off
       Frame         [-31, -11; 31, 11]
@@ -535,7 +535,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [500, 430]
+      Position      [465, 500]
       Direction     right
       Flipped       off
       Parameter {
@@ -553,7 +553,7 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [500, 465]
+      Position      [465, 535]
       Direction     right
       Flipped       off
       Parameter {
@@ -571,7 +571,7 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [285, 465]
+      Position      [270, 525]
       Direction     up
       Flipped       off
       Location      [0, 63; 1366, 748]
@@ -715,7 +715,7 @@ Plecs {
       Type          From
       Name          "From5"
       Show          off
-      Position      [140, 425]
+      Position      [125, 485]
       Direction     right
       Flipped       off
       Parameter {
@@ -733,7 +733,7 @@ Plecs {
       Type          From
       Name          "From6"
       Show          off
-      Position      [140, 450]
+      Position      [125, 510]
       Direction     right
       Flipped       off
       Parameter {
@@ -751,7 +751,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [190, 465]
+      Position      [175, 525]
       Direction     right
       Flipped       off
       Parameter {
@@ -769,7 +769,7 @@ Plecs {
       Type          ACVoltageSource
       Name          "V_ac"
       Show          on
-      Position      [110, 210]
+      Position      [110, 240]
       Direction     down
       Flipped       on
       Parameter {
@@ -792,7 +792,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vinput"
       Show          on
-      Position      [195, 320]
+      Position      [195, 350]
       Direction     up
       Flipped       off
     }
@@ -800,7 +800,7 @@ Plecs {
       Type          Voltmeter
       Name          "Voutput"
       Show          on
-      Position      [385, 250]
+      Position      [385, 280]
       Direction     up
       Flipped       off
     }
@@ -808,7 +808,7 @@ Plecs {
       Type          Ammeter
       Name          "Iload"
       Show          on
-      Position      [485, 265]
+      Position      [485, 295]
       Direction     up
       Flipped       off
     }
@@ -816,7 +816,7 @@ Plecs {
       Type          Resistor
       Name          "R1"
       Show          on
-      Position      [485, 185]
+      Position      [485, 215]
       Direction     up
       Flipped       off
       Parameter {
@@ -829,7 +829,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [240, 330]
+      Position      [240, 360]
       Direction     right
       Flipped       off
       Parameter {
@@ -847,7 +847,7 @@ Plecs {
       Type          Goto
       Name          "Goto1"
       Show          off
-      Position      [425, 230]
+      Position      [425, 260]
       Direction     right
       Flipped       off
       Parameter {
@@ -865,7 +865,7 @@ Plecs {
       Type          Goto
       Name          "Goto2"
       Show          off
-      Position      [530, 265]
+      Position      [530, 295]
       Direction     right
       Flipped       off
       Parameter {
@@ -883,7 +883,7 @@ Plecs {
       Type          Inductor
       Name          "L1"
       Show          on
-      Position      [485, 315]
+      Position      [485, 345]
       Direction     up
       Flipped       off
       Parameter {
@@ -901,7 +901,7 @@ Plecs {
       Type          Ground
       Name          "Ground"
       Show          off
-      Position      [250, 385]
+      Position      [250, 415]
       Direction     up
       Flipped       off
     }
@@ -909,7 +909,7 @@ Plecs {
       Type          Thyristor
       Name          "Thy1"
       Show          on
-      Position      [285, 140]
+      Position      [285, 170]
       Direction     left
       Flipped       off
       Parameter {
@@ -960,7 +960,7 @@ Plecs {
       Type          From
       Name          "From8"
       Show          off
-      Position      [170, 480]
+      Position      [155, 540]
       Direction     right
       Flipped       off
       Parameter {
@@ -1133,7 +1133,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vr"
       Show          on
-      Position      [580, 185]
+      Position      [580, 215]
       Direction     up
       Flipped       off
     }
@@ -1141,7 +1141,7 @@ Plecs {
       Type          Voltmeter
       Name          "VL"
       Show          on
-      Position      [580, 280]
+      Position      [580, 310]
       Direction     up
       Flipped       off
     }
@@ -1149,7 +1149,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux1"
       Show          off
-      Position      [660, 230]
+      Position      [660, 260]
       Direction     right
       Flipped       off
       Parameter {
@@ -1162,7 +1162,7 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [700, 230]
+      Position      [700, 260]
       Direction     right
       Flipped       off
       Parameter {
@@ -1180,7 +1180,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [150, 495]
+      Position      [135, 555]
       Direction     right
       Flipped       off
       Parameter {
@@ -1198,7 +1198,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux2"
       Show          off
-      Position      [180, 435]
+      Position      [165, 495]
       Direction     right
       Flipped       off
       Parameter {
@@ -1211,7 +1211,7 @@ Plecs {
       Type          Capacitor
       Name          "C1"
       Show          on
-      Position      [285, 205]
+      Position      [285, 235]
       Direction     left
       Flipped       on
       Parameter {
@@ -1229,7 +1229,7 @@ Plecs {
       Type          Diode
       Name          "D1"
       Show          on
-      Position      [445, 305]
+      Position      [445, 335]
       Direction     down
       Flipped       off
       Parameter {
@@ -1257,7 +1257,7 @@ Plecs {
       Type          Sum
       Name          "Subtract"
       Show          off
-      Position      [295, 235]
+      Position      [295, 265]
       Direction     down
       Flipped       off
       Parameter {
@@ -1280,7 +1280,7 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [235, 235]
+      Position      [235, 265]
       Direction     left
       Flipped       off
       Parameter {
@@ -1298,7 +1298,7 @@ Plecs {
       Type          From
       Name          "From10"
       Show          off
-      Position      [215, 485]
+      Position      [200, 545]
       Direction     right
       Flipped       off
       Parameter {
@@ -1323,7 +1323,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From4"
       SrcTerminal   1
-      Points        [515, 465; 515, 450]
+      Points        [480, 535; 480, 520]
       DstComponent  "PF"
       DstTerminal   2
     }
@@ -1331,7 +1331,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From3"
       SrcTerminal   1
-      Points        [515, 430; 515, 440]
+      Points        [480, 500; 480, 510]
       DstComponent  "PF"
       DstTerminal   1
     }
@@ -1398,9 +1398,9 @@ Plecs {
       Type          Wire
       SrcComponent  "Vr"
       SrcTerminal   2
-      Points        [580, 225]
+      Points        [580, 255]
       Branch {
-        Points        [485, 225]
+        Points        [485, 255]
         Branch {
           DstComponent  "R1"
           DstTerminal   2
@@ -1419,7 +1419,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Vr"
       SrcTerminal   3
-      Points        [635, 185; 635, 225]
+      Points        [635, 215; 635, 255]
       DstComponent  "Mux1"
       DstTerminal   2
     }
@@ -1427,7 +1427,7 @@ Plecs {
       Type          Signal
       SrcComponent  "VL"
       SrcTerminal   3
-      Points        [635, 280; 635, 235]
+      Points        [635, 310; 635, 265]
       DstComponent  "Mux1"
       DstTerminal   3
     }
@@ -1442,11 +1442,11 @@ Plecs {
       Type          Wire
       SrcComponent  "Ground"
       SrcTerminal   1
-      Points        [250, 350]
+      Points        [250, 380]
       Branch {
-        Points        [195, 350]
+        Points        [195, 380]
         Branch {
-          Points        [110, 350]
+          Points        [110, 380]
           DstComponent  "V_ac"
           DstTerminal   2
         }
@@ -1456,17 +1456,17 @@ Plecs {
         }
       }
       Branch {
-        Points        [385, 350]
+        Points        [385, 380]
         Branch {
-          Points        [445, 350]
+          Points        [445, 380]
           Branch {
-            Points        [485, 350]
+            Points        [485, 380]
             Branch {
               DstComponent  "L1"
               DstTerminal   2
             }
             Branch {
-              Points        [580, 350]
+              Points        [580, 380]
               DstComponent  "VL"
               DstTerminal   2
             }
@@ -1500,24 +1500,24 @@ Plecs {
       Type          Wire
       SrcComponent  "R1"
       SrcTerminal   1
-      Points        [485, 140]
+      Points        [485, 170]
       Branch {
-        Points        [580, 140]
+        Points        [580, 170]
         DstComponent  "Vr"
         DstTerminal   1
       }
       Branch {
-        Points        [445, 140]
+        Points        [445, 170]
         Branch {
-          Points        [385, 140]
+          Points        [385, 170]
           Branch {
-            Points        [345, 140]
+            Points        [345, 170]
             Branch {
               DstComponent  "Thy1"
               DstTerminal   2
             }
             Branch {
-              Points        [345, 205]
+              Points        [345, 235]
               DstComponent  "C1"
               DstTerminal   1
             }
@@ -1537,7 +1537,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
-      Points        [160, 425; 160, 430]
+      Points        [145, 485; 145, 490]
       DstComponent  "Mux2"
       DstTerminal   2
     }
@@ -1545,7 +1545,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From6"
       SrcTerminal   1
-      Points        [160, 450; 160, 440]
+      Points        [145, 510; 145, 500]
       DstComponent  "Mux2"
       DstTerminal   3
     }
@@ -1553,7 +1553,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux2"
       SrcTerminal   1
-      Points        [225, 435; 225, 445]
+      Points        [210, 495; 210, 505]
       DstComponent  "Scope1"
       DstTerminal   1
     }
@@ -1561,7 +1561,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [240, 465; 240, 455]
+      Points        [225, 525; 225, 515]
       DstComponent  "Scope1"
       DstTerminal   2
     }
@@ -1569,7 +1569,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From8"
       SrcTerminal   1
-      Points        [245, 480; 245, 465]
+      Points        [230, 540; 230, 525]
       DstComponent  "Scope1"
       DstTerminal   3
     }
@@ -1577,7 +1577,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From9"
       SrcTerminal   1
-      Points        [255, 495]
+      Points        [240, 555]
       DstComponent  "Scope1"
       DstTerminal   4
     }
@@ -1585,15 +1585,15 @@ Plecs {
       Type          Wire
       SrcComponent  "V_ac"
       SrcTerminal   1
-      Points        [110, 140; 195, 140]
+      Points        [110, 170; 195, 170]
       Branch {
-        Points        [230, 140]
+        Points        [230, 170]
         Branch {
           DstComponent  "Thy1"
           DstTerminal   1
         }
         Branch {
-          Points        [230, 205]
+          Points        [230, 235]
           DstComponent  "C1"
           DstTerminal   2
         }
@@ -1607,14 +1607,14 @@ Plecs {
       Type          Signal
       SrcComponent  "Vinput"
       SrcTerminal   3
-      Points        [215, 320]
+      Points        [215, 350]
       Branch {
-        Points        [220, 320]
+        Points        [220, 350]
         DstComponent  "Goto"
         DstTerminal   1
       }
       Branch {
-        Points        [215, 300; 325, 300]
+        Points        [215, 330; 325, 330]
         DstComponent  "Subtract"
         DstTerminal   2
       }
@@ -1623,7 +1623,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Voutput"
       SrcTerminal   3
-      Points        [400, 230]
+      Points        [400, 260]
       Branch {
         DstComponent  "Goto1"
         DstTerminal   1
@@ -1649,4 +1649,4 @@ Plecs {
     }
   }
 }
-DemoSignature "AR+dZHhB/9bqDlu6Csqbhl7Ic6L4dcXmj63c0incyyg="
+DemoSignature "HdCO4PoKYCucNZ9LbX4jXQG4hW3fDg9bPcaOho/jY1o="

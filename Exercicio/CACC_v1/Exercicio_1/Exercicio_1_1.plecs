@@ -540,7 +540,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "V1in"
+        Value         "Vout"
         Show          off
       }
       Parameter {
@@ -1252,4 +1252,4 @@ Plecs {
     }
   }
 }
-DemoSignature "3tfF8plPzioCrbtSvWxOQte6PKb3w78U8mofizYzOTw="
+DemoSignature "fnBS3xLsrvH/TQh5brfCYXZmFngNX0kY+TR9584mdUM="
