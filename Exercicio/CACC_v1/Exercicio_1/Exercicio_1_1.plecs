@@ -571,7 +571,7 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [195, 325]
+      Position      [195, 330]
       Direction     up
       Flipped       off
       Location      [0, 63; 1366, 748]
@@ -582,11 +582,11 @@ Plecs {
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALAAIAAAABAAAAC"
-"QAAAGQAAAVWAAAACwEAAAEAAAAAAAAAAAAAAABk/////wAAAIEAAAAAAAAACwAAAGoAAAABAAAAAA"
-"AAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAA"
-"AAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAGQAAAABAAAAAAAAAAAAAAABAAAAAAAAAcwAAAAB"
-"AAAAAAAAA+gAAAAAJw=="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVYAA"
+"AALAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAALAAAAagAAAAEAAAAAAAAAZAAAAAEAAA"
+"AAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAE"
+"AAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAABaAAAAAEAAAAAAAAD6AAA"
+"AAAn"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "=="
@@ -899,7 +899,7 @@ Plecs {
       Flipped       on
       Parameter {
         Variable      "V"
-        Value         "230*sqrt(2)"
+        Value         "-230*sqrt(2)"
         Show          on
       }
       Parameter {
@@ -909,7 +909,7 @@ Plecs {
       }
       Parameter {
         Variable      "phi"
-        Value         "pi"
+        Value         "0"
         Show          off
       }
     }
@@ -1214,7 +1214,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux"
       SrcTerminal   1
-      Points        [135, 285; 135, 315]
+      Points        [135, 285; 135, 320]
       DstComponent  "Scope1"
       DstTerminal   1
     }
@@ -1238,7 +1238,6 @@ Plecs {
       Type          Signal
       SrcComponent  "From6"
       SrcTerminal   1
-      Points        [145, 330; 145, 325]
       DstComponent  "Scope1"
       DstTerminal   2
     }
@@ -1246,10 +1245,10 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [145, 360; 145, 340; 150, 340; 150, 335]
+      Points        [145, 360; 145, 340]
       DstComponent  "Scope1"
       DstTerminal   3
     }
   }
 }
-DemoSignature "fnBS3xLsrvH/TQh5brfCYXZmFngNX0kY+TR9584mdUM="
+DemoSignature "2+Pjh7oAtbh7ZZ80If+EX9GQ+zO6zS+zeynx8Whz9Ko="
