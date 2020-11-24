@@ -12,10 +12,10 @@
 \section{Esquema}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.7]{./image/esquema.jpg}\\
+	\includegraphics[scale=0.6]{./image/esquema.jpg}\\
 	\caption{Esquema}
 \end{figure}
-Um condensador quando esta a ser alimentado por uma fonte de corrente com um valor constante este carrega de forma linear no tempo, sendo que a corrente fornecida determina sua taxa de crescimentos, [$\frac{V}{Sec}$].\\ \\
+Um condensador quando esta a ser alimentado por uma fonte de corrente com um valor constante este carrega de forma linear no tempo, sendo que a corrente fornecida determina sua taxa de crescimentos, $\left[ \frac{Volt}{Sec} \right]$.\\ \\
 O circuito alimentado com uma fonte de 19 Volt tem tensão mínimo e máximo: \\
 \begin{minipage}[l]{0pt}
 	$$\left\lbrace\begin{array}{c}
@@ -31,9 +31,12 @@ O circuito alimentado com uma fonte de 19 Volt tem tensão mínimo e máximo: \\
 	\end{array}\right.$$
 \end{minipage}\\
 \\
+\\
 Vamos ver que o integrador vai usar um condensador de 1nF, que vai necessitar de uma corrente de carga de $6,96 \times 10^{-4} \quad A$, na qual traduz na resistência a ser usada, já que a malha de realimentação é uma fonte de corrente determinada pela resistência colocada na entrada inversor, é o principio de funcionamento do {\bf AMPOP} com realimentação negativa, mantém as entradas sempre ao mesmo potencial.
-
-\newpage
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{./image/trb3calc_1.jpg}\\
+	\caption{Determinar Corrente}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Material}
 \begin{minipage}[t]{.4\linewidth}
@@ -63,10 +66,8 @@ Vamos ver que o integrador vai usar um condensador de 1nF, que vai necessitar de
 	\end{itemize}
 \end{minipage}\\
 \\
-Circuito Funciona de 10 Volt até 32 Volt testado em bancada, sendo necessário ajuste fino para calibração pelo Potenciómetro de  1Kohm. 
-Pode se sempre consultar os {\it datasheets} dos componentes.\\
-
-Ver Imagem do PCB caso duvidas. \\
+Circuito Funciona de 10 Volt até 32 Volt testado em bancada, sendo necessário ajuste fino para calibração pelo Potenciómetro de  1Kohm.
+Pode se sempre consultar os {\it datasheets} dos componentes.
 \section{PCB (Printed Circuit Board)}
 %\begin{comment}	
 \begin{figure}[ht]
@@ -76,6 +77,7 @@ Ver Imagem do PCB caso duvidas. \\
 \end{center}
 \caption{PCB}
 \end{figure}\par
+Este circuito tem um comportamento muito estável e flexibilidade, temos de ter em conta as características dos componentes, que não interfere na sua funcionalidade mas na tolerância que é dependente da temperatura, alimentação e dos componentes, se se quer grande precisão só através de medição e ajustes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Simulação}
 %\begin{comment}	
