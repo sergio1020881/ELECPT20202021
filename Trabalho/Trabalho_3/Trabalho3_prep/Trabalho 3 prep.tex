@@ -15,7 +15,24 @@
 	\includegraphics[scale=0.7]{./image/esquema.jpg}\\
 	\caption{Esquema}
 \end{figure}
-Não sei se devo acrescentar um drive na saída do sinal controlado, caso sim posso por um circuito lógico buffer. 
+Um condensador quando esta a ser alimentado por uma fonte de corrente com um valor constante este carrega de forma linear no tempo, sendo que a corrente fornecida determina sua taxa de crescimentos, [$\frac{V}{Sec}$].\\ \\
+O circuito alimentado com uma fonte de 19 Volt tem tensão mínimo e máximo: \\
+\begin{minipage}[l]{0pt}
+	$$\left\lbrace\begin{array}{c}
+ 	-8,4 \quad V \\
+ 	9 \quad V \\
+ \end{array}\right.$$
+\end{minipage}
+\hspace{3cm} 12,9 Kohm \hspace{3cm}
+\begin{minipage}[l]{0pt}
+	$$\left\lbrace\begin{array}{c}
+		6,5116 \times 10^{-4} \quad A \\
+		6,9767 \times 10^{-4} \quad A \\
+	\end{array}\right.$$
+\end{minipage}\\
+\\
+Vamos ver que o integrador vai usar um condensador de 1nF, que vai necessitar de uma corrente de carga de $6,96 \times 10^{-4} \quad A$, na qual traduz na resistência a ser usada, já que a malha de realimentação é uma fonte de corrente determinada pela resistência colocada na entrada inversor, é o principio de funcionamento do {\bf AMPOP} com realimentação negativa, mantém as entradas sempre ao mesmo potencial.
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Material}
@@ -52,29 +69,22 @@ Pode se sempre consultar os {\it datasheets} dos componentes.\\
 Ver Imagem do PCB caso duvidas. \\
 \section{PCB (Printed Circuit Board)}
 %\begin{comment}	
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.15]{./image/placa_1.jpg}\\
-	\caption{Top View}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.15]{./image/placa_2.jpg}\\
-	\caption{Back View}
+\begin{figure}[ht]
+\begin{center}
+	\includegraphics[scale=0.07]{./image/placa_1.jpg} \hspace{0.2cm}
+	\includegraphics[scale=0.07]{./image/placa_2.jpg}
+\end{center}
+\caption{PCB}
 \end{figure}\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Simulação}
 %\begin{comment}	
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.15]{./image/quadrado.jpg}\\
-	\caption{Onda Quadrada}
+	\includegraphics[scale=0.13]{./image/Ondas.jpg}\\
+	\caption{Ondas}
 \end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.15]{./image/triangulo.jpg}\\
-	\caption{Onda Triangular}
-\end{figure}\par
+%\end{comment}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -82,3 +92,11 @@ Ver Imagem do PCB caso duvidas. \\
 %
 	\end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%EOF%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.15]{./image/triangulo.jpg}\\
+\caption{Onda Triangular}
+\end{figure}\par
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
