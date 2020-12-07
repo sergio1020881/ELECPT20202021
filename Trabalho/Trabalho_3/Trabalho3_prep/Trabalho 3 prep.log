@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  29 NOV 2020 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  7 DEC 2020 22:57
 entering extended mode
 **"./Trabalho 3 prep.tex"
 ("Trabalho 3 prep.tex"
@@ -556,11 +556,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--18
 
  []
 
-<./image/esquema.jpg, id=1, 664.73344pt x 411.03563pt>
+<./image/esquema.jpg, id=1, 663.22781pt x 411.03563pt>
 File: ./image/esquema.jpg Graphic file (type jpg)
 <use ./image/esquema.jpg>
 Package pdftex.def Info: ./image/esquema.jpg  used on input line 21.
-(pdftex.def)             Requested size: 398.84314pt x 246.62328pt.
+(pdftex.def)             Requested size: 464.2563pt x 287.72298pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
@@ -610,35 +610,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--45
 
 {C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/esquema
 .jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 6741) in paragraph at lines 70--72
+\T1/cmr/m/n/12 Dual Power Mos-FET
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--77
+Underfull \hbox (badness 10000) in paragraph at lines 48--81
 
  []
 
-<./image/placa_1.jpg, id=21, 3276.24pt x 1846.9pt>
-File: ./image/placa_1.jpg Graphic file (type jpg)
-<use ./image/placa_1.jpg>
-Package pdftex.def Info: ./image/placa_1.jpg  used on input line 81.
-(pdftex.def)             Requested size: 229.36023pt x 129.2962pt.
+<./image/DevBoardPWM.jpg, id=21, 2045.6425pt x 1583.9175pt>
+File: ./image/DevBoardPWM.jpg Graphic file (type jpg)
+<use ./image/DevBoardPWM.jpg>
+Package pdftex.def Info: ./image/DevBoardPWM.jpg  used on input line 85.
+(pdftex.def)             Requested size: 204.57623pt x 158.40103pt.
 <./image/placa_2.jpg, id=22, 3276.24pt x 1846.9pt>
 File: ./image/placa_2.jpg Graphic file (type jpg)
 <use ./image/placa_2.jpg>
-Package pdftex.def Info: ./image/placa_2.jpg  used on input line 82.
+Package pdftex.def Info: ./image/placa_2.jpg  used on input line 86.
 (pdftex.def)             Requested size: 229.36023pt x 129.2962pt.
-<./image/Ondas.jpg, id=23, 3276.24pt x 1846.9pt>
+[2 <./image/trb3calc_1.jpg> <./image/DevBoardPWM.jpg> <./image/placa_2.jpg>]
+<./image/Ondas.jpg, id=28, 3276.24pt x 1846.9pt>
 File: ./image/Ondas.jpg Graphic file (type jpg)
 <use ./image/Ondas.jpg>
-Package pdftex.def Info: ./image/Ondas.jpg  used on input line 92.
+Package pdftex.def Info: ./image/Ondas.jpg  used on input line 96.
 (pdftex.def)             Requested size: 425.92616pt x 240.10542pt.
-[2 <./image/trb3calc_1.jpg> <./image/placa_1.jpg> <./image/placa_2.jpg>]
+
 [3 <./image/Ondas.jpg>] [4] ("Trabalho 3 prep.aux") ) 
 Here is how much of TeX's memory you used:
  8722 strings out of 480790
- 135832 string characters out of 2907055
+ 135856 string characters out of 2907055
  536059 words of memory out of 3000000
  24544 multiletter control sequences out of 15000+200000
  548521 words of font info for 64 fonts, out of 3000000 for 9000
@@ -664,9 +670,9 @@ mmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
 Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Trabalho 3 prep.pdf" (4 pages, 6266933 bytes).
+Output written on "Trabalho 3 prep.pdf" (4 pages, 5611784 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
+ 259 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

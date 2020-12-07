@@ -18,7 +18,7 @@
 \section{Esquema}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{./image/esquema.jpg}\\
+	\includegraphics[scale=0.7]{./image/esquema.jpg}\\
 	\caption{Esquema}
 \end{figure}
 Um condensador quando esta a ser alimentado por uma fonte de corrente com um valor constante este carrega de forma linear no tempo, sendo que a corrente fornecida determina sua taxa de crescimentos, $\left[ \frac{Volt}{Sec} \right]$.\\ \\
@@ -52,9 +52,11 @@ Vamos ver que o integrador vai usar um condensador de 1nF, que vai necessitar de
 		1/4 Watt, varias.
 		\item Potenciómetro multi-volta \\
 		100Kohm e 1Kohm
+		\item 7812 \\
+		Regulador Tensão 12Volt
 		\item Condensador \\
 		1nF, 10nF  \\
-		2x Eletrolítico 10uF
+		3x Eletrolítico 10uF
 		
 	\end{itemize}
 \end{minipage}
@@ -65,6 +67,8 @@ Vamos ver que o integrador vai usar um condensador de 1nF, que vai necessitar de
 		\item TL084 \\
 		Quad Opamp Chip \\
 		14 Pinos
+		\item ICL7667 \\
+		Dual Power MosFET Driver
 		\item Ficha Alimentação
 		\item Fusível 800mA
 		\item Diodo 1N4148
@@ -73,12 +77,12 @@ Vamos ver que o integrador vai usar um condensador de 1nF, que vai necessitar de
 \end{minipage}\\
 \\
 Circuito Funciona de 10 Volt até 32 Volt testado em bancada, sendo necessário ajuste fino para calibração pelo Potenciómetro de  1Kohm.
-Pode se sempre consultar os {\it datasheets} dos componentes.
+Pode se sempre consultar os {\it datasheets} dos componentes, na qual são todos visíveis na imagem.
 \section{PCB (Printed Circuit Board)}
 %\begin{comment}	
 \begin{figure}[ht]
 \begin{center}
-	\includegraphics[scale=0.07]{./image/placa_1.jpg} \hspace{0.2cm}
+	\includegraphics[scale=0.1]{./image/DevBoardPWM.jpg} \hspace{0.2cm}
 	\includegraphics[scale=0.07]{./image/placa_2.jpg}
 \end{center}
 \caption{PCB}
