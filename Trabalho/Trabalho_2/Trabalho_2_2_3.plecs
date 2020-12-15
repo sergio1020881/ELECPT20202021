@@ -558,7 +558,7 @@ Plecs {
       Flipped       off
       Parameter {
         Variable      "Tag"
-        Value         "Iload"
+        Value         "Iin"
         Show          off
       }
       Parameter {
@@ -1056,12 +1056,11 @@ Plecs {
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
-"gAAAGQAAAAFAAAAZAAAAAQAAABkAAAACQAAAGQAAAAIAAAAZAAAAAMAAABkAAAAAgAAAGQAAAABAA"
-"AAZAAAAAcAAABkAAAFRQAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAB9AAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"ATIAAAAAQAAAAAAAAPoAAAAACc="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUUAA"
+"AALAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAALAAAAfQAAAAEAAAAAAAAAZAAAAAEAAA"
+"AAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAE"
+"AAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAABRAAAAAEAAAAAAAAD6AAA"
+"AAAn"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
       Axes          "2"
@@ -1312,6 +1311,32 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          Ammeter
+      Name          "Iinload"
+      Show          on
+      Position      [415, 170]
+      Direction     left
+      Flipped       off
+    }
+    Component {
+      Type          Goto
+      Name          "Goto6"
+      Show          off
+      Position      [435, 130]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Tag"
+        Value         "Iin"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+    }
     Connection {
       Type          Signal
       SrcComponent  "PF"
@@ -1509,28 +1534,35 @@ Plecs {
       Branch {
         Points        [445, 170]
         Branch {
-          Points        [385, 170]
-          Branch {
-            Points        [345, 170]
-            Branch {
-              DstComponent  "Thy1"
-              DstTerminal   2
-            }
-            Branch {
-              Points        [345, 235]
-              DstComponent  "C1"
-              DstTerminal   1
-            }
-          }
-          Branch {
-            DstComponent  "Voutput"
-            DstTerminal   1
-          }
+          DstComponent  "Iinload"
+          DstTerminal   2
         }
         Branch {
           DstComponent  "D1"
           DstTerminal   2
         }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Thy1"
+      SrcTerminal   2
+      Points        [345, 170]
+      Branch {
+        Points        [385, 170]
+        Branch {
+          DstComponent  "Iinload"
+          DstTerminal   1
+        }
+        Branch {
+          DstComponent  "Voutput"
+          DstTerminal   1
+        }
+      }
+      Branch {
+        Points        [345, 235]
+        DstComponent  "C1"
+        DstTerminal   1
       }
     }
     Connection {
@@ -1647,6 +1679,13 @@ Plecs {
       DstComponent  "Scope1"
       DstTerminal   5
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Iinload"
+      SrcTerminal   3
+      DstComponent  "Goto6"
+      DstTerminal   1
+    }
   }
 }
-DemoSignature "HdCO4PoKYCucNZ9LbX4jXQG4hW3fDg9bPcaOho/jY1o="
+DemoSignature "t21xx6EuwSFsPQO3qMVC88NxAloqRSk8osKosTE1a4g="
