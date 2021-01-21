@@ -7,3 +7,4 @@ os valores todos como positivo.
 Para ficar Generico:
 1º Somar as Areas
 2º Dividir Pelo Periodo
+
